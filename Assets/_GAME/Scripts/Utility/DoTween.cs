@@ -99,5 +99,25 @@ namespace com.novega.projectLIYAVERSE
                 }
             }
         }
+
+        public void SetColor(Color _color)
+        {
+            toColor = _color;
+        }
+
+        public void SetFloat(float _float)
+        {
+            toFloat = _float;
+        }
+
+        public void SetSeconds(float _seconds)
+        {
+            seconds = _seconds;
+        }
+
+        public void SetLerp(float _lerp)
+        {
+            backupLerp = _lerp;
+        }
     }
 }

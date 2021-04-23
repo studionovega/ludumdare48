@@ -810,7 +810,7 @@ MonoBehaviour:
   startTween: 0
   type: ImageAlpha
   activateAfterWait: 1
-  waitSeconds: 1.8
+  waitSeconds: 2
   seconds: 1.25
   backupLerp: 0.25
   toFloat: 0.04
@@ -830,7 +830,7 @@ MonoBehaviour:
   startTween: 0
   type: Scale
   activateAfterWait: 1
-  waitSeconds: 2.25
+  waitSeconds: 2
   seconds: 0.5
   backupLerp: 0.25
   toFloat: 1

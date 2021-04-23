@@ -6,8 +6,13 @@ namespace com.novega.ludumdare48
 {
     public class CharacterMovement : MonoBehaviour
     {
-        public float moveSpeed = 1f;
-        public float gravity = 40.0f;
+        [SerializeField] float moveSpeed = 1f;
+        [SerializeField] float sprintMult = 1f;
+        [SerializeField] float gravity = 40.0f;
+        [SerializeField] float jumpHeight = 5.0f;
+        [SerializeField] Transform groundCheck;
+        [SerializeField] float groundDistance = 0.4f;
+        [SerializeField] LayerMask groundMask;
         [SerializeField] Transform footstepsSpawn;
         [SerializeField] GameObject footstepParticles;
 
@@ -15,10 +20,13 @@ namespace com.novega.ludumdare48
         private Animator _animator;
         private GameReference gameRef;
         [HideInInspector] public float hAxis, vAxis;
+        [HideInInspector] public bool isGrounded = false;
 
         public static bool freezeMovement = false; //For when menus are open and stuff.
 
         Vector2 storedMovement;
+        Vector3 velocity;
+        float moveMult = 0.5f;
 
         // Start is called before the first frame update
         void Start()
@@ -43,21 +51,48 @@ namespace com.novega.ludumdare48
                 vAxis = 0f;
             }
 
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+            if (isGrounded && velocity.y < 0f)
+            {
+                velocity.y = -2f;
+            }
+
             if (Mathf.Abs(hAxis) > 0.25f || Mathf.Abs(vAxis) > 0.25f)
             {
-                motion.x = hAxis * (moveSpeed / 2);
-                motion.z = vAxis * (moveSpeed / 2);
+                motion = (hAxis * transform.right) + (vAxis * transform.forward);
                 storedMovement = new Vector2(hAxis, vAxis);
-                _animator.SetBool("isMoving", true);
+                if (_animator) { _animator.SetBool("isMoving", true); }
             }
             else
             {
-                _animator.SetBool("isMoving", false);
+                if (_animator) { _animator.SetBool("isMoving", false); }
             }
 
-            motion.y -= gravity * Time.deltaTime;
+            _controller.Move(motion * (moveSpeed * moveMult) * Time.deltaTime);
 
-            _controller.Move(motion * Time.deltaTime);
+            velocity.y -= gravity * Time.deltaTime;
+
+            Debug.Log(isGrounded);
+
+            _controller.Move(velocity * Time.deltaTime);
+        }
+
+        void Update()
+        {
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * -gravity);
+            }
+
+            if (Input.GetButton("Sprint"))
+            {
+                moveMult = sprintMult;
+            }
+            else
+            {
+                moveMult = 0.5f;
+            }
         }
 
         public void SpawnFootsteps() {

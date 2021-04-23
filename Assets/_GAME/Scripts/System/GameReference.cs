@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 /*
 
-    LAMPCHASERS Game Reference
+    LD48 Game Reference
 
     TO USE THIS IN YOUR SCRIPTS, COPY THE FOLLOWING CODE:    GameReference.Assign(ref gameRef);
-    Requires a GameReference variable named gameRef (in this case), and the script must use the com.novega.projectLIYAVERSE namespace.
+    Requires a GameReference variable named gameRef (in this case), and the script must use the com.novega.ludumdare48 namespace.
 
 */
 
@@ -21,6 +22,7 @@ namespace com.novega.ludumdare48
     {
         public static GameReference thisObject;
         [HideInInspector] public LDFEScript_EN dialogueScript; // the current script in the game; all other scripts derive from LampchasersDialogue_EN.
+        [SerializeField] AudioMixer gameMixer;
 
         public bool bareMinimum = false;
 
@@ -37,6 +39,7 @@ namespace com.novega.ludumdare48
         {
             thisObject = this;
 
+            // initialize dialogue
             var gObject = GameObject.FindWithTag("DialogueController");
             if (null == gObject)
             {
@@ -47,6 +50,27 @@ namespace com.novega.ludumdare48
             else
             {
                 dialogueScript = gObject.GetComponent<LDFEScript_EN>();
+            }
+
+            // initialize volume
+            if (PlayerPrefs.HasKey("Music_VOL"))
+            {
+                gameMixer.SetFloat("Music", PlayerPrefs.GetFloat("Music_VOL"));
+            }
+            if (PlayerPrefs.HasKey("SFX_VOL"))
+            {
+                gameMixer.SetFloat("SFX", PlayerPrefs.GetFloat("SFX_VOL"));
+            }
+
+            // initialize graphics
+            if (PlayerPrefs.HasKey("GraphicsSetting"))
+            {
+                QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("GraphicsSetting", 2), true);
+            }
+            else
+            {
+                QualitySettings.SetQualityLevel(2, true); // high by default
+                PlayerPrefs.SetInt("GraphicsSetting", 2);
             }
         }
 
