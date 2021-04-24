@@ -58,7 +58,7 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void FixedUpdate()
         {
-            Debug.Log(freezeMovement);
+            //Debug.Log(freezeMovement);
             hAxis = controlFlip ? -Input.GetAxis("Horizontal") : Input.GetAxis("Horizontal");
             vAxis = controlFlip ? -Input.GetAxis("Vertical") : Input.GetAxis("Vertical");
 
@@ -94,7 +94,31 @@ namespace com.novega.ludumdare48
 
             //Debug.Log(isGrounded);
 
+            if (isGrounded)
+            {
+                //Check if above a moving platform, if so move character with it.
+                RaycastHit hit;
+
+                if (Physics.SphereCast(transform.position, _controller.radius, -transform.up, out hit, _controller.height))
+                {
+                    MovingPlatform platform = hit.collider.gameObject.GetComponent<MovingPlatform>();
+                    if (platform != null)
+                    {
+                        _controller.Move(platform.delta);
+                        Debug.Log("Platform");
+                    }
+                    else
+                    {
+                        Debug.Log("Hit " + hit.collider.gameObject);
+                    }
+                }
+            }
+
             _controller.Move(velocity * Time.deltaTime);
+
+
+
+            
 
             if (transform.position.y <= voidHeight && !gameOver)
             {
