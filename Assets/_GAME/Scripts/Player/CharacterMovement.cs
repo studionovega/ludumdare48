@@ -20,6 +20,9 @@ namespace com.novega.ludumdare48
         [SerializeField] Transform footstepsSpawn;
         [SerializeField] GameObject footstepParticles;
         [SerializeField] GameObject gameOverScreen;
+        //for drunkenness
+        [SerializeField] CameraTilt cameraTilt;
+        [SerializeField] CameraBob cameraBob;
 
         private CharacterController _controller;
         private Animator _animator;
@@ -131,7 +134,7 @@ namespace com.novega.ludumdare48
 
             // pick a number
             int pick = Random.Range(1, 101);
-            int seed = Random.Range(0, 3);
+            int seed = Random.Range(0, 4);
 
             Debug.Log($"PICK: {pick}, SEED: {seed}");
 
@@ -139,6 +142,7 @@ namespace com.novega.ludumdare48
             controlFlip = false;
             cam.fieldOfView = 70f;
             bunnyHop = false;
+            SetDrunk(false);
 
             // if that number is larger than your sanity, then you go insane
             if (pick >= sanity)
@@ -157,6 +161,10 @@ namespace com.novega.ludumdare48
                     case 2:
                         // bunny hop
                         bunnyHop = true;
+                        break;
+                    case 3:
+                        //drunken camera
+                        SetDrunk(true);
                         break;
                 }
             }
@@ -207,6 +215,34 @@ namespace com.novega.ludumdare48
 
         public void SpawnFootsteps() {
             Instantiate(footstepParticles, footstepsSpawn.position, footstepsSpawn.rotation);
+        }
+
+        private void SetDrunk(bool isDrunk)
+        {
+            if (isDrunk)
+            {
+                Debug.Log("Drunk time!");
+                cameraBob.bobbingAmount = 0.4f;
+                cameraBob.walkingBobbingSpeed = 10;
+                cameraBob.sprintMult = 1.4f;
+
+                cameraTilt.tiltX = 10;
+                cameraTilt.tiltY = 10;
+                cameraTilt.tiltZ = 10;
+                cameraTilt.tiltXSpeed = 0.7f;
+                cameraTilt.tiltYSpeed = 0.6f;
+                cameraTilt.tiltZSpeed = 1f;
+            }
+            else
+            {
+                cameraBob.bobbingAmount = 0.05f;
+                cameraBob.walkingBobbingSpeed = 14;
+                cameraBob.sprintMult = 2;
+
+                cameraTilt.tiltX = 0;
+                cameraTilt.tiltY = 0;
+                cameraTilt.tiltZ = 0;
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ namespace com.novega.ludumdare48
         {
             if (other.gameObject.name.Contains("Player"))
             {
-                
+                StartCoroutine(EndLevel());
             }
         }
 
