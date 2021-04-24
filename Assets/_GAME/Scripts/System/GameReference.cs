@@ -29,6 +29,7 @@ namespace com.novega.ludumdare48
         [Header("References")]
         [Tooltip("0 = EN, 1 = ES-MX, 2 = FR, 3 = IT, 4 = DE, 5 = JP, 6 = KR")]
         public int currentLanguage = 0;
+        public CharacterMovement player;
 
         [Header("Enabled/Disabled")]
         public bool gameStarted;
