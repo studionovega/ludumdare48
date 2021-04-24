@@ -8,6 +8,7 @@ namespace com.novega.projectLIYAVERSE
     public class UIS_LoadScene : MonoBehaviour
     {
         public string sceneToLoad;
+        public bool loadThisScene = false;
         public bool loadAutomatically;
         public float waitSeconds;
         AsyncOperation op;
@@ -16,8 +17,6 @@ namespace com.novega.projectLIYAVERSE
         void Start()
         {
             DontDestroyOnLoad(gameObject);
-            op = SceneManager.LoadSceneAsync(sceneToLoad);
-            op.allowSceneActivation = false;
             if (loadAutomatically)
             {
                 StartCoroutine(SceneLoad());
@@ -32,6 +31,14 @@ namespace com.novega.projectLIYAVERSE
         // Update is called once per frame
         IEnumerator SceneLoad()
         {
+            if (loadThisScene)
+            {
+                sceneToLoad = SceneManager.GetActiveScene().name;
+            }
+
+            op = SceneManager.LoadSceneAsync(sceneToLoad);
+            op.allowSceneActivation = false;
+
             yield return new WaitForSecondsRealtime(0.5f); // wait 0.5s
 
             yield return new WaitForSecondsRealtime(waitSeconds); // wait for WaitSeconds time
