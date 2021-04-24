@@ -46,6 +46,7 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void FixedUpdate()
         {
+            Debug.Log(freezeMovement);
             hAxis = controlFlip ? -Input.GetAxis("Horizontal") : Input.GetAxis("Horizontal");
             vAxis = controlFlip ? -Input.GetAxis("Vertical") : Input.GetAxis("Vertical");
 
@@ -79,7 +80,7 @@ namespace com.novega.ludumdare48
 
             velocity.y -= gravity * Time.deltaTime;
 
-            Debug.Log(isGrounded);
+            //Debug.Log(isGrounded);
 
             _controller.Move(velocity * Time.deltaTime);
         }
