@@ -328,9 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975e380616f1964baf2e7976623fef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiltX: 12
-  tiltY: 12
-  tiltZ: 10
+  tiltX: 0
+  tiltY: 0
+  tiltZ: 0
   tiltXSpeed: 0.7
   tiltYSpeed: 0.6
   tiltZSpeed: 1
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   sprintMult: 1
-  sanity: 100
+  sanity: 0
   sanityDrainSpeed: 1
   sanityWaitTimes: {x: 1, y: 10}
   gravity: 40
@@ -462,6 +462,8 @@ MonoBehaviour:
   footstepsSpawn: {fileID: 0}
   footstepParticles: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  cameraTilt: {fileID: 1298524404275712386}
+  cameraBob: {fileID: 1298524404275712389}
   hAxis: 0
   vAxis: 0
   isGrounded: 0
