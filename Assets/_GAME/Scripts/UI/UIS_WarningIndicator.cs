@@ -22,6 +22,8 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(gameRef);
+
             if (player != gameRef.player)
             {
                 player = gameRef.player;

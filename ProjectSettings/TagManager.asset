@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - DialogueController
-  - Hands
+  - SanityBottle
+  - TriggerDeath
   layers:
   - Default
   - TransparentFX
