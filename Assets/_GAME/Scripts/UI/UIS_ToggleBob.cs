@@ -16,6 +16,9 @@ namespace com.novega.ludumdare48
         // Start is called before the first frame update
         void Start()
         {
+            // initialize variables
+            button = GetComponent<Image>();
+
             // get bob preference; otherwise set it for first time
             if (PlayerPrefs.HasKey("EnableBob"))
             {
@@ -40,8 +43,6 @@ namespace com.novega.ludumdare48
                     button.color = onColour;
                     break;
             }
-
-            button = GetComponent<Image>();
         }
 
         // Update is called once per frame

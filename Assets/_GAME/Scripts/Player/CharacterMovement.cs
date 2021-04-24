@@ -8,6 +8,9 @@ namespace com.novega.ludumdare48
     {
         [SerializeField] float moveSpeed = 1f;
         [SerializeField] float sprintMult = 1f;
+        [SerializeField] float sanity = 100.0f;
+        [SerializeField] float sanityDrainSpeed = 1f;
+        [SerializeField] Vector2 sanityWaitTimes = new Vector2(1, 10);
         [SerializeField] float gravity = 40.0f;
         [SerializeField] float jumpHeight = 5.0f;
         [SerializeField] Transform groundCheck;
@@ -21,12 +24,15 @@ namespace com.novega.ludumdare48
         private GameReference gameRef;
         [HideInInspector] public float hAxis, vAxis;
         [HideInInspector] public bool isGrounded = false;
+        [HideInInspector] public bool warnTrigger = false;
 
         public static bool freezeMovement = false; //For when menus are open and stuff.
 
         Vector2 storedMovement;
         Vector3 velocity;
         float moveMult = 0.5f;
+        bool controlFlip = false;
+        bool rolling = false;
 
         // Start is called before the first frame update
         void Start()
@@ -40,8 +46,8 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void FixedUpdate()
         {
-            hAxis = Input.GetAxis("Horizontal");
-            vAxis = Input.GetAxis("Vertical");
+            hAxis = controlFlip ? -Input.GetAxis("Horizontal") : Input.GetAxis("Horizontal");
+            vAxis = controlFlip ? -Input.GetAxis("Vertical") : Input.GetAxis("Vertical");
 
             Vector3 motion = new Vector3(0.0f, 0.0f, 0.0f);
 
@@ -93,6 +99,42 @@ namespace com.novega.ludumdare48
             {
                 moveMult = 0.5f;
             }
+
+            if (!rolling)
+            {
+                StartCoroutine(Reroll());
+            }
+        }
+
+        IEnumerator Reroll()
+        {
+            // close loop
+            rolling = true;
+
+            // pick a number
+            int pick = Random.Range(1, 100);
+
+            // if that number is larger than your sanity, then you go insane
+            if (pick >= sanity)
+            {
+                controlFlip = true;
+            }
+            else
+            {
+                // normality
+                controlFlip = false;
+            }
+
+            // wait for a random amount of time, then reroll
+            yield return new WaitForSeconds(Random.Range(sanityWaitTimes.x, sanityWaitTimes.y));
+
+            // warn player
+            warnTrigger = true;
+            yield return new WaitForSeconds(1.5f);
+
+            // reroll
+            warnTrigger = false;
+            StartCoroutine(Reroll());
         }
 
         public void SpawnFootsteps() {
