@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   sprintMult: 1
-  sanity: 100
+  sanity: 50
   sanityDrainSpeed: 2
   sanityWaitTimes: {x: 1, y: 5}
   gravity: 40
