@@ -23,6 +23,8 @@ namespace com.novega.ludumdare48
         //for drunkenness
         [SerializeField] CameraTilt cameraTilt;
         [SerializeField] CameraBob cameraBob;
+        //Hands
+        [SerializeField] Hands hands;
 
         private CharacterController _controller;
         private Animator _animator;
@@ -105,11 +107,6 @@ namespace com.novega.ludumdare48
                     if (platform != null)
                     {
                         _controller.Move(platform.delta);
-                        Debug.Log("Platform");
-                    }
-                    else
-                    {
-                        Debug.Log("Hit " + hit.collider.gameObject);
                     }
                 }
             }
@@ -190,6 +187,16 @@ namespace com.novega.ludumdare48
                         //drunken camera
                         SetDrunk(true);
                         break;
+                    case 4:
+                        //dizzy camera
+                        cameraTilt.tiltY = 15;
+                        cameraTilt.tiltYSpeed = 0.6f;
+                        break;
+                    case 5:
+                        //Hands
+                        hands.ActivateHands(7);
+                        break;
+
                 }
             }
             else
