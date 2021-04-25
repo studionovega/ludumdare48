@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace com.novega.projectLIYAVERSE {
+namespace com.novega.ludumdare48 {
     public class ObjectAfterSeconds : MonoBehaviour
     {
         public enum EditType {
@@ -11,13 +11,30 @@ namespace com.novega.projectLIYAVERSE {
         }
 
         [SerializeField] EditType type = EditType.Destroy;
+        [SerializeField] bool dialogueTrigger;
         [SerializeField] float seconds;
         [SerializeField] GameObject[] objects;
+
+        DDS_Autoplay dialogue;
 
         // Start is called before the first frame update
         IEnumerator Start()
         {
-            yield return new WaitForSecondsRealtime(seconds);
+            dialogue = GetComponent<DDS_Autoplay>();
+
+            yield return new WaitForEndOfFrame();
+
+            if (!dialogueTrigger)
+            {
+                yield return new WaitForSecondsRealtime(seconds);
+            }
+            else
+            {
+                if (dialogue) 
+                {
+                    yield return dialogue._eventTrigger;
+                }
+            }
 
             if (objects.Length == 0 || null == objects)
             {

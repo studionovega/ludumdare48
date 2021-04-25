@@ -87,7 +87,13 @@ namespace com.novega.ludumdare48
 
         void Update()
         {
-            if (Input.GetButtonDown("ButtonA")) {
+            string button = "ButtonA";
+            if (!freezePlayer)
+            {
+                button = "ButtonX";
+            }
+
+            if (Input.GetButtonDown(button)) {
                 dialogManager.Click_Window();
             }
         }

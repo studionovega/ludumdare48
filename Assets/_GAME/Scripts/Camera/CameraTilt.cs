@@ -21,7 +21,7 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void Update()
         {
-            transform.localEulerAngles = new Vector3(Mathf.Sin(Time.timeSinceLevelLoad * tiltXSpeed) * tiltX, Mathf.Sin(Time.timeSinceLevelLoad * tiltYSpeed) * tiltY, Mathf.Sin(Time.timeSinceLevelLoad * tiltZSpeed) * tiltZ);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Mathf.Sin(Time.timeSinceLevelLoad * tiltYSpeed) * tiltY, Mathf.Sin(Time.timeSinceLevelLoad * tiltZSpeed) * tiltZ);
         }
     }
 }
