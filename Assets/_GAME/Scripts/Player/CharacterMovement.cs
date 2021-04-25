@@ -26,6 +26,8 @@ namespace com.novega.ludumdare48
         //for drunkenness
         [SerializeField] CameraTilt cameraTilt;
         [SerializeField] CameraBob cameraBob;
+        //Hands
+        [SerializeField] Hands hands;
         [SerializeField] Slider sprintSlider, sanitySlider;
 
         private CharacterController _controller;
@@ -114,7 +116,12 @@ namespace com.novega.ludumdare48
                     if (platform != null)
                     {
                         _controller.Move(platform.delta);
-                        Debug.Log("Platform");
+                    }
+                            else
+                            {
+                                Debug.Log("Hit " + hit.collider.gameObject);
+                            }
+                        }
                     }
                     else
                     {
@@ -127,7 +134,7 @@ namespace com.novega.ludumdare48
                     }
                 }
             }
-
+    
             _controller.Move(velocity * Time.deltaTime);
 
             if (transform.position.y <= voidHeight && !gameOver)
@@ -238,6 +245,16 @@ namespace com.novega.ludumdare48
                         drunkMode = true;
                         Debug.Log("Roll: DRUNKEN SAILOR");
                         break;
+                    case 4:
+                        //dizzy camera
+                        cameraTilt.tiltY = 15;
+                        cameraTilt.tiltYSpeed = 0.6f;
+                        break;
+                    case 5:
+                        //Hands
+                        hands.ActivateHands(7);
+                        break;
+
                 }
             }
             else
