@@ -117,12 +117,6 @@ namespace com.novega.ludumdare48
                     {
                         _controller.Move(platform.delta);
                     }
-                            else
-                            {
-                                Debug.Log("Hit " + hit.collider.gameObject);
-                            }
-                        }
-                    }
                     else
                     {
                         Debug.Log("Hit " + hit.collider.gameObject);
