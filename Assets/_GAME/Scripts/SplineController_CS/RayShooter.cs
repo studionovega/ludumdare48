@@ -7,9 +7,11 @@ namespace com.novega.ludumdare48
     public class RayShooter : MonoBehaviour
     {
         private Camera _camera;
-        public GameObject hitPrefab;
-
-        public float firingSpeed = 0.5f;
+        //public GameObject hitPrefab;
+        public GameObject cursorObject;
+        public GameObject crosshairObject;
+        public float maxDistance = 5f;
+        //public float firingSpeed = 0.5f;
 
         // Use this for initialization
         void Start()
@@ -22,13 +24,14 @@ namespace com.novega.ludumdare48
         // Update is called once per frame
         void Update()
         {
-
-            if (Input.GetMouseButtonDown(0))
-            {
+            cursorObject.SetActive(false);
+            crosshairObject.SetActive(true);
+            
                 Vector3 point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
                 Ray ray = _camera.ScreenPointToRay(point);
+            
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, maxDistance))
                 {
                     GameObject hitObject = hit.transform.gameObject;
 
@@ -37,7 +40,11 @@ namespace com.novega.ludumdare48
                     //Debug.Log("You hit " + hit.transform.gameObject.ToString());
 
                     ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
-                    if (target != null)
+                if (target != null)
+                {
+                    cursorObject.SetActive(true);
+                    crosshairObject.SetActive(false);
+                    if (Input.GetMouseButtonDown(0))
                     {
                         target.ReactToHit();
                     }
