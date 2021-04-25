@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 namespace com.novega.ludumdare48
 {
@@ -9,31 +9,33 @@ namespace com.novega.ludumdare48
     {
         public bool runTimer;
         public float levelTime = 0f;
-        private float countdownTime = 3;
-        public Text timerText;
+        private float countdownTime = 6;
+        public TextMeshProUGUI timerText;
         public GameObject timerTextObject;
-        public Text countdownText;
+        public TextMeshProUGUI countdownText;
         public GameObject countdownTextObject;
         public GameReference gameRef;
 
         // Start is called before the first frame update
         void Start()
         {
+            GameReference.Assign(ref gameRef);
+
             StartCountdown();
         }
 
         // Update is called once per frame
         void Update()
         {
-        if (runTimer)
+            if (runTimer)
             {
                 levelTime += Time.deltaTime;
                 timerText.text = levelTime.ToString("0.000");
             }
             else
             {
-                countdownTime -= Time.deltaTime;
-                countdownText.text = Mathf.Ceil(countdownTime).ToString();
+                countdownTime -= Time.deltaTime * 2f;
+                countdownText.text = Mathf.Ceil(countdownTime / 2f).ToString();
             }
         }
 
@@ -46,17 +48,18 @@ namespace com.novega.ludumdare48
         private IEnumerator CountdownTimer()
         {
             Debug.Log("Start countdown");
-            countdownTime = 3f;
+            countdownTime = 6f;
             levelTime = 0f;
             runTimer = false;
             timerTextObject.SetActive(false);
             countdownTextObject.SetActive(true);
-            CharacterMovement.freezeMovement = true;
+            gameRef.gameStarted = false;
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(countdownTime / 2f);
 
             countdownTextObject.SetActive(false);
             timerTextObject.SetActive(true);
+            gameRef.gameStarted = true;
             CharacterMovement.freezeMovement = false;
             runTimer = true;
             Debug.Log("Finished countdown");

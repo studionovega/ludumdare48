@@ -53,6 +53,8 @@ namespace com.novega.ludumdare48
         bool rolling = false;
         bool gameOver = false;
         public bool springTrigger = false;
+        bool coyote = false;
+        bool ces = false;
 
         // Start is called before the first frame update
         void Start()
@@ -81,11 +83,22 @@ namespace com.novega.ludumdare48
                 vAxis = 0f;
             }
 
+            if (!gameRef.gameStarted)
+            {
+                freezeMovement = true;
+            }
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
             if (isGrounded && velocity.y < 0f)
             {
                 velocity.y = -2f;
+                coyote = true;
+            }
+
+            if (!isGrounded && coyote && !ces)
+            {
+                StartCoroutine(CoyoteTime());
             }
 
             if (Mathf.Abs(hAxis) > 0.25f || Mathf.Abs(vAxis) > 0.25f)
@@ -139,9 +152,10 @@ namespace com.novega.ludumdare48
 
         void Update()
         {
-            if (Input.GetButtonDown("Jump") && isGrounded || bunnyHop && isGrounded)
+            if (Input.GetButtonDown("Jump") && isGrounded || bunnyHop && isGrounded || Input.GetButtonDown("Jump") && coyote)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * -gravity);
+                coyote = false;
             }
 
             if (springTrigger)
@@ -180,16 +194,28 @@ namespace com.novega.ludumdare48
                 }
             }
 
-            if (!rolling)
+            if (!rolling && gameRef.gameStarted)
             {
                 StartCoroutine(Reroll());
             }
 
-            sanity -= sanityDrainSpeed * Time.deltaTime;
-            sanity = Mathf.Clamp(sanity, 0.0f, 100.0f);
+            if (gameRef.gameStarted)
+            {
+                sanity -= sanityDrainSpeed * Time.deltaTime;
+                sanity = Mathf.Clamp(sanity, 0.0f, 100.0f);
+            }
+            
             sanitySlider.value = sanity;
-
             sprintSlider.value = sprintMeter;
+        }
+
+        IEnumerator CoyoteTime()
+        {
+            ces = true;
+            yield return new WaitForSeconds(0.25f);
+
+            coyote = false;
+            ces = false;
         }
 
         IEnumerator Reroll()
@@ -197,9 +223,16 @@ namespace com.novega.ludumdare48
             // close loop
             rolling = true;
 
+            // wait for a random amount of time, then reroll
+            yield return new WaitForSeconds(Random.Range(sanityWaitTimes.x, sanityWaitTimes.y));
+
+            // warn player
+            warnTrigger = true;
+            yield return new WaitForSeconds(1.5f);
+
             // pick a number
             int pick = Random.Range(1, 101);
-            int seed = Random.Range(0, 4);
+            int seed = Random.Range(0, 6);
 
             Debug.Log($"PICK: {pick}, SEED: {seed}");
 
@@ -212,7 +245,7 @@ namespace com.novega.ludumdare48
             drunkMode = false;
 
             // if that number is larger than your sanity, then you go insane
-            if (pick >= sanity)
+            if (pick >= sanity - 20f) // there's always a 20% chance you'll get a dis-power
             {
                 switch (seed)
                 {
@@ -258,13 +291,6 @@ namespace com.novega.ludumdare48
                 cam.fieldOfView = 70f;
                 bunnyHop = false;
             }
-
-            // wait for a random amount of time, then reroll
-            yield return new WaitForSeconds(Random.Range(sanityWaitTimes.x, sanityWaitTimes.y));
-
-            // warn player
-            warnTrigger = true;
-            yield return new WaitForSeconds(1.5f);
 
             // reroll
             warnTrigger = false;

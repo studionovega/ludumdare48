@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74c4e6b055ef2a4e8f52c7883bab45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SCN_Level1
+  sceneToLoad: SCN_Level-1
   loadThisScene: 0
   loadAutomatically: 1
   waitSeconds: 0

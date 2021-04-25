@@ -92,7 +92,7 @@ namespace com.novega.ludumdare48
             // [00020]
             characterScript.Add("fuck.");
 
-            // SCENE: Level 1 ---------------------------------------------------------------------------------------------------------------------------
+            // SCENE: Level 2 ---------------------------------------------------------------------------------------------------------------------------
             // [00021]
             characterScript.Add("/s/HANS:/e/ \nRICO? RICO MY GOOD SIR, CAN YOU HEAR ME?");
             // [00022]
@@ -141,6 +141,18 @@ namespace com.novega.ludumdare48
             characterScript.Add("(Hans hangs up the phone.)");
             // [00044]
             characterScript.Add("/s/RICO:/e/ \nson of a bitch.");
+
+            // SCENE: Level 1 ---------------------------------------------------------------------------------------------------------------------------
+            // [00045]
+            characterScript.Add("/s/HANS:/e/ \nRICO? RIC/i/~bzzt~/ei/, CA/i/~bzzt~/ei/AR ME? /i/~bzzt~/ei/");
+            // [00046]
+            characterScript.Add("/s/RICO:/e/ \n...?");
+            // [00047]
+            characterScript.Add("(Someone appears to be calling you, Rico Guzman, from a mysterious walkie-talkie holstered on your hip.)");
+            // [00048]
+            characterScript.Add("(It seems like they're having trouble reaching you.)");
+            // [00049]
+            characterScript.Add("/s/RICO:/e/ \nwhere even am i?");
         }
 
         public virtual void DefineUI()
