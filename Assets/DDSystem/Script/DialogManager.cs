@@ -213,7 +213,7 @@ namespace Doublsb.Dialog
         {
             GameReference.Assign(ref gameRef);
             _currentDelay = Delay;
-            _lastDelay = 0.1f;
+            _lastDelay = Delay;
             Printer_Text.text = string.Empty;
 
             Printer.SetActive(true);

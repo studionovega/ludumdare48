@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298524404275712387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1298524404611394118}
@@ -447,12 +447,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  sprintMeter: 100
   sprintMult: 1
   sanity: 100
   sanityDrainSpeed: 1
   sanityWaitTimes: {x: 6, y: 15}
   gravity: 40
   jumpHeight: 3
+  springHeight: 20
   groundCheck: {fileID: 1298524402950851310}
   groundDistance: 0.5
   groundMask:
@@ -465,7 +467,19 @@ MonoBehaviour:
   cameraTilt: {fileID: 1298524404275712386}
   cameraBob: {fileID: 1298524404275712389}
   hands: {fileID: 0}
+  sprintSlider: {fileID: 0}
+  sanitySlider: {fileID: 0}
   hAxis: 0
   vAxis: 0
   isGrounded: 0
   warnTrigger: 0
+  sprintDepleted: 0
+  noPowers: 0
+  controlFlip: 0
+  hyperfocus: 0
+  bunnyHop: 0
+  drunkMode: 0
+  joyconDrift: 0
+  demHands: 0
+  rtxOn: 0
+  springTrigger: 0

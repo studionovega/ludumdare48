@@ -23,6 +23,7 @@ namespace com.novega.ludumdare48
         [SerializeField] Transform footstepsSpawn;
         [SerializeField] GameObject footstepParticles;
         [SerializeField] GameObject gameOverScreen;
+        [SerializeField] PlayRandomSound jumpSound;
         //for drunkenness
         [SerializeField] CameraTilt cameraTilt;
         [SerializeField] CameraBob cameraBob;
@@ -38,10 +39,14 @@ namespace com.novega.ludumdare48
         [HideInInspector] public bool warnTrigger = false;
         [HideInInspector] public bool sprintDepleted = false;
 
+        [HideInInspector] public bool noPowers = false;
         [HideInInspector] public bool controlFlip = false;
+        [HideInInspector] public bool hyperfocus = false;
         [HideInInspector] public bool bunnyHop = false;
         [HideInInspector] public bool drunkMode = false;
-        [HideInInspector] public bool tunnelVision = false;
+        [HideInInspector] public bool joyconDrift = false;
+        [HideInInspector] public bool demHands = false;
+        [HideInInspector] public bool rtxOn = false;
 
         public static bool freezeMovement = false; //For when menus are open and stuff.
 
@@ -112,7 +117,7 @@ namespace com.novega.ludumdare48
                 if (_animator) { _animator.SetBool("isMoving", false); }
             }
 
-            _controller.Move(motion * (moveSpeed * moveMult) * Time.deltaTime);
+            _controller.Move(motion * (moveSpeed * moveMult * (rtxOn ? 3f : 1f)) * Time.deltaTime);
 
             velocity.y -= gravity * Time.deltaTime;
 
@@ -156,6 +161,11 @@ namespace com.novega.ludumdare48
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * -gravity);
                 coyote = false;
+
+                if (gameRef.gameStarted)
+                {
+                    jumpSound.PlayRandom();
+                }
             }
 
             if (springTrigger)
@@ -231,18 +241,13 @@ namespace com.novega.ludumdare48
             yield return new WaitForSeconds(1.5f);
 
             // pick a number
-            int pick = Random.Range(1, 101);
-            int seed = Random.Range(0, 6);
+            float pick = Random.Range(1f, 100f);
+            int seed = Random.Range(0, 7);
 
             Debug.Log($"PICK: {pick}, SEED: {seed}");
 
             // reset before applying roll
-            controlFlip = false;
-            cam.fieldOfView = 70f;
-            tunnelVision = false;
-            bunnyHop = false;
-            SetDrunk(false);
-            drunkMode = false;
+            ResetStats();
 
             // if that number is larger than your sanity, then you go insane
             if (pick >= sanity - 20f) // there's always a 20% chance you'll get a dis-power
@@ -253,43 +258,57 @@ namespace com.novega.ludumdare48
                     default:
                         // control flip
                         controlFlip = true;
+                        noPowers = false;
                         Debug.Log("Roll: CONTROL FLIP");
                         break;
                     case 1:
                         // crazy fov
-                        cam.fieldOfView = 120f;
-                        tunnelVision = true;
-                        Debug.Log("Roll: TUNNEL VISION");
+                        cam.fieldOfView = 30f;
+                        hyperfocus = true;
+                        noPowers = false;
+                        Debug.Log("Roll: HYPERFOCUS");
                         break;
                     case 2:
                         // bunny hop
                         bunnyHop = true;
+                        noPowers = false;
                         Debug.Log("Roll: BUNNY HOP");
                         break;
                     case 3:
                         //drunken camera
                         SetDrunk(true);
                         drunkMode = true;
+                        noPowers = false;
                         Debug.Log("Roll: DRUNKEN SAILOR");
                         break;
                     case 4:
                         //dizzy camera
                         cameraTilt.tiltY = 15;
                         cameraTilt.tiltYSpeed = 0.6f;
+                        joyconDrift = true;
+                        noPowers = false;
+                        Debug.Log("Roll: JOYCON DRIFT");
                         break;
                     case 5:
                         //Hands
                         hands.ActivateHands(7);
+                        demHands = true;
+                        noPowers = false;
+                        Debug.Log("Roll: HANDS?");
                         break;
-
+                    case 6:
+                        // auto-sprint
+                        cam.fieldOfView = 120f;
+                        rtxOn = true;
+                        noPowers = false;
+                        Debug.Log("Roll: RTX ON");
+                        break;
                 }
             }
             else
             {
                 // normality
-                controlFlip = false;
-                cam.fieldOfView = 70f;
-                bunnyHop = false;
+                ResetStats();
             }
 
             // reroll
@@ -297,11 +316,26 @@ namespace com.novega.ludumdare48
             StartCoroutine(Reroll());
         }
 
+        void ResetStats()
+        {
+            noPowers = true;
+            controlFlip = false;
+            cam.fieldOfView = 70f;
+            hyperfocus = false;
+            bunnyHop = false;
+            SetDrunk(false);
+            drunkMode = false;
+            joyconDrift = false;
+            demHands = false;
+            rtxOn = false;
+        }
+
         void CommitDie()
         {
             Instantiate(gameOverScreen);
             Cursor.lockState = CursorLockMode.None;
             gameOver = true;
+            gameRef.gameStarted = false;
         }
 
         private void OnTriggerEnter(Collider other)

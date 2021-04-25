@@ -99,7 +99,7 @@ MonoBehaviour:
   SEAudio: {fileID: 3100939074457579451}
   CallAudio: {fileID: 3100939074457579448}
   interactAudio: {fileID: 8300000, guid: 993967dc5bdbc6343b37b13b01405edd, type: 3}
-  Delay: 0.035
+  Delay: 0.015
   state: 0
   Result: 
 --- !u!114 &3100939074457579457
