@@ -12,6 +12,7 @@ namespace com.novega.ludumdare48
         void Start()
         {
             startPos = transform.position;
+            StartCoroutine(KillTimer());
         }
 
         // Update is called once per frame
@@ -22,6 +23,12 @@ namespace com.novega.ludumdare48
                 transform.position += new Vector3(0, speed * Time.deltaTime, 0);
                 transform.position = new Vector3(startPos.x + Random.Range(-0.1f, 0.1f), transform.position.y, startPos.z + Random.Range(-0.1f, 0.1f));
             }
+        }
+
+        private IEnumerator KillTimer()
+        {
+            yield return new WaitForSeconds(10);
+            Destroy(gameObject);
         }
     }
 }

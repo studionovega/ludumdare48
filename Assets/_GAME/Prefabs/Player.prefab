@@ -450,7 +450,7 @@ MonoBehaviour:
   sprintMult: 1
   sanity: 100
   sanityDrainSpeed: 1
-  sanityWaitTimes: {x: 1, y: 10}
+  sanityWaitTimes: {x: 6, y: 15}
   gravity: 40
   jumpHeight: 3
   groundCheck: {fileID: 1298524402950851310}
@@ -464,6 +464,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   cameraTilt: {fileID: 1298524404275712386}
   cameraBob: {fileID: 1298524404275712389}
+  hands: {fileID: 0}
   hAxis: 0
   vAxis: 0
   isGrounded: 0

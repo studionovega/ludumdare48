@@ -10,12 +10,11 @@ namespace com.novega.ludumdare48
 
         private void Start()
         {
-            ActivateHands();
         }
 
-        public void ActivateHands()
+        public void ActivateHands(int handCount)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < handCount; i++)
             {
                 int hand = Random.Range(0, hands.Length - 1);
                 GameObject g = Instantiate(hands[Random.Range(0,hands.Length)]);
