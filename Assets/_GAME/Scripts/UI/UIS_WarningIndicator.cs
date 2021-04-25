@@ -10,6 +10,7 @@ namespace com.novega.ludumdare48
         GameReference gameRef;
         CharacterMovement player;
         Image warningImage;
+        Vector3 startPosition;
 
         // Start is called before the first frame update
         void Start()
@@ -17,6 +18,7 @@ namespace com.novega.ludumdare48
             GameReference.Assign(ref gameRef);
             player = gameRef.player;
             warningImage = GetComponent<Image>();
+            startPosition = transform.position;
         }
 
         // Update is called once per frame
@@ -37,6 +39,12 @@ namespace com.novega.ludumdare48
             {
                 warningImage.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
             }
+
+            transform.position = new Vector3(
+                startPosition.x + Mathf.Sin(Time.time * 100.0f) * 20.0f,
+                startPosition.y + Mathf.Sin(Time.time * 80.0f) * 10.0f,
+                0.0f
+                );
         }
     }
 }

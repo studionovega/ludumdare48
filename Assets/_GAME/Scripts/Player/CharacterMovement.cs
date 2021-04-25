@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace com.novega.ludumdare48
 {
     public class CharacterMovement : MonoBehaviour
     {
         [SerializeField] float moveSpeed = 1f;
+        [SerializeField] float sprintMeter = 100.0f;
         [SerializeField] float sprintMult = 1f;
         [SerializeField] float sanity = 100.0f;
         [SerializeField] float sanityDrainSpeed = 1f;
         [SerializeField] Vector2 sanityWaitTimes = new Vector2(1, 10);
         [SerializeField] float gravity = 40.0f;
         [SerializeField] float jumpHeight = 5.0f;
+        [SerializeField] float springHeight = 20.0f;
         [SerializeField] Transform groundCheck;
         [SerializeField] float groundDistance = 0.4f;
         [SerializeField] LayerMask groundMask;
@@ -23,6 +26,7 @@ namespace com.novega.ludumdare48
         //for drunkenness
         [SerializeField] CameraTilt cameraTilt;
         [SerializeField] CameraBob cameraBob;
+        [SerializeField] Slider sprintSlider, sanitySlider;
 
         private CharacterController _controller;
         private Animator _animator;
@@ -30,6 +34,12 @@ namespace com.novega.ludumdare48
         [HideInInspector] public float hAxis, vAxis;
         [HideInInspector] public bool isGrounded = false;
         [HideInInspector] public bool warnTrigger = false;
+        [HideInInspector] public bool sprintDepleted = false;
+
+        [HideInInspector] public bool controlFlip = false;
+        [HideInInspector] public bool bunnyHop = false;
+        [HideInInspector] public bool drunkMode = false;
+        [HideInInspector] public bool tunnelVision = false;
 
         public static bool freezeMovement = false; //For when menus are open and stuff.
 
@@ -38,10 +48,9 @@ namespace com.novega.ludumdare48
         Vector3 spawnPosition = Vector3.zero;
         Vector3 velocity;
         float moveMult = 0.5f;
-        bool controlFlip = false;
-        bool bunnyHop = false;
         bool rolling = false;
         bool gameOver = false;
+        public bool springTrigger = false;
 
         // Start is called before the first frame update
         void Start()
@@ -111,14 +120,15 @@ namespace com.novega.ludumdare48
                     {
                         Debug.Log("Hit " + hit.collider.gameObject);
                     }
+
+                    if (hit.collider.CompareTag("Spring"))
+                    {
+                        springTrigger = true;
+                    }
                 }
             }
 
             _controller.Move(velocity * Time.deltaTime);
-
-
-
-            
 
             if (transform.position.y <= voidHeight && !gameOver)
             {
@@ -133,13 +143,40 @@ namespace com.novega.ludumdare48
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * -gravity);
             }
 
-            if (Input.GetButton("Sprint"))
+            if (springTrigger)
+            {
+                velocity.y = Mathf.Sqrt(springHeight * -2f * -gravity);
+
+                if (Input.GetButtonDown("Jump") && isGrounded || bunnyHop && isGrounded)
+                {
+                    velocity.y += Mathf.Sqrt(jumpHeight * -2f * -gravity);
+                }
+                Debug.Log("THIS WAS CALLED!");
+                springTrigger = false;
+            }
+
+            if (Input.GetButton("Sprint") && sprintMeter >= Time.deltaTime * 30f && !sprintDepleted)
             {
                 moveMult = sprintMult;
+                sprintMeter -= Time.deltaTime * 30f;
             }
             else
             {
                 moveMult = 0.5f;
+                if (sprintMeter < 100.0f)
+                {
+                    sprintMeter += Time.deltaTime * 20f;
+                }
+                else
+                {
+                    sprintMeter = 100.0f;
+                    sprintDepleted = false;
+                }
+
+                if (sprintMeter < 2f)
+                {
+                    sprintDepleted = true;
+                }
             }
 
             if (!rolling)
@@ -149,6 +186,9 @@ namespace com.novega.ludumdare48
 
             sanity -= sanityDrainSpeed * Time.deltaTime;
             sanity = Mathf.Clamp(sanity, 0.0f, 100.0f);
+            sanitySlider.value = sanity;
+
+            sprintSlider.value = sprintMeter;
         }
 
         IEnumerator Reroll()
@@ -165,8 +205,10 @@ namespace com.novega.ludumdare48
             // reset before applying roll
             controlFlip = false;
             cam.fieldOfView = 70f;
+            tunnelVision = false;
             bunnyHop = false;
             SetDrunk(false);
+            drunkMode = false;
 
             // if that number is larger than your sanity, then you go insane
             if (pick >= sanity)
@@ -177,18 +219,24 @@ namespace com.novega.ludumdare48
                     default:
                         // control flip
                         controlFlip = true;
+                        Debug.Log("Roll: CONTROL FLIP");
                         break;
                     case 1:
                         // crazy fov
                         cam.fieldOfView = 120f;
+                        tunnelVision = true;
+                        Debug.Log("Roll: TUNNEL VISION");
                         break;
                     case 2:
                         // bunny hop
                         bunnyHop = true;
+                        Debug.Log("Roll: BUNNY HOP");
                         break;
                     case 3:
                         //drunken camera
                         SetDrunk(true);
+                        drunkMode = true;
+                        Debug.Log("Roll: DRUNKEN SAILOR");
                         break;
                 }
             }

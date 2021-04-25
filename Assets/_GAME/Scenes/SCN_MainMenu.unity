@@ -3636,7 +3636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74c4e6b055ef2a4e8f52c7883bab45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SCN_Test_1PP
+  sceneToLoad: SCN_ML_Level1
+  loadThisScene: 0
   loadAutomatically: 0
   waitSeconds: 3
 --- !u!1 &776549932
@@ -5527,6 +5528,7 @@ MonoBehaviour:
   gameMixer: {fileID: 24100000, guid: b4083731abeba414ea5a08f3b7f6adbb, type: 2}
   bareMinimum: 1
   currentLanguage: 0
+  player: {fileID: 0}
   gameStarted: 0
   lerpSpeed: 0
 --- !u!4 &1254462742

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace com.novega.projectLIYAVERSE
+namespace com.novega.ludumdare48
 {
     public class UIS_LoadScene : MonoBehaviour
     {
@@ -12,6 +12,7 @@ namespace com.novega.projectLIYAVERSE
         public bool loadAutomatically;
         public float waitSeconds;
         AsyncOperation op;
+        bool sceneLoading = false;
 
         // Start is called before the first frame update
         void Start()
@@ -25,12 +26,17 @@ namespace com.novega.projectLIYAVERSE
 
         public void StartLoad()
         {
-            StartCoroutine(SceneLoad());
+            if (!sceneLoading)
+            {
+                StartCoroutine(SceneLoad());
+            }
         }
 
         // Update is called once per frame
         IEnumerator SceneLoad()
         {
+            sceneLoading = true;
+
             if (loadThisScene)
             {
                 sceneToLoad = SceneManager.GetActiveScene().name;

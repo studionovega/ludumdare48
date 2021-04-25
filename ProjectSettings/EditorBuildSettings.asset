@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/_GAME/Scenes/SCN_MainMenu.unity
     guid: 73cef5c70f71f314da5ff88091c61c80
   - enabled: 1
-    path: Assets/_GAME/Scenes/Obsolete/SCN_Test_PL.unity
-    guid: 88c0da881a18a674284761cf8e75969a
+    path: Assets/_GAME/Scenes/Monologue/SCN_ML_Level1.unity
+    guid: 7b9e5bf8b120d2a4b9a91bc71d1da9a5
   - enabled: 1
-    path: Assets/_GAME/Scenes/SCN_Test_1PP.unity
-    guid: 641ce12eb7ff4ae4f89cf4dbefca946b
+    path: Assets/_GAME/Scenes/Levels/SCN_Level1.unity
+    guid: 7e2a691a86c3fb14c89a708dd1e248d7
   m_configObjects: {}

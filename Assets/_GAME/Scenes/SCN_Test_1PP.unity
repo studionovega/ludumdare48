@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 324307138}
   - component: {fileID: 324307137}
   - component: {fileID: 324307142}
+  - component: {fileID: 324307143}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -322,6 +323,24 @@ MonoBehaviour:
   bobMult: 1
   sprintMult: 2
   controller: {fileID: 1025349815}
+--- !u!114 &324307143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324307136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4975e380616f1964baf2e7976623fef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltX: 0
+  tiltY: 0
+  tiltZ: 0
+  tiltXSpeed: 1
+  tiltYSpeed: 1
+  tiltZSpeed: 1
 --- !u!1 &361464532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1149,8 @@ MonoBehaviour:
   footstepsSpawn: {fileID: 0}
   footstepParticles: {fileID: 0}
   gameOverScreen: {fileID: 129781799314308003, guid: 2cf717988a12fc5418b8c1c2f3f26774, type: 3}
+  cameraTilt: {fileID: 324307143}
+  cameraBob: {fileID: 324307142}
   hAxis: 0
   vAxis: 0
   isGrounded: 0
