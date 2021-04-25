@@ -10,6 +10,8 @@ namespace com.novega.ludumdare48
         // WARNING: This is probably one of the least readable pieces of code you will ever see in this entire project, I know, ye have been warned.
         // If you want something to be changed / fixed, talk to me about it. Otherwise, good luck- keep a backup of the original. ~ Marten
 
+        [SerializeField] bool autoSkip = false;
+        [SerializeField] float autoSkipInterval = 5f;
         [SerializeField] bool startAfterSeconds = false;
         [SerializeField] float seconds;
         [SerializeField] bool freezePlayer = false;
@@ -33,6 +35,7 @@ namespace com.novega.ludumdare48
         GameReference gameRef;
         LDFEScript_EN dScript;
         DialogManager dialogManager;
+        float skipTime;
 
         // Start is called before the first frame update
         IEnumerator Start()
@@ -93,8 +96,14 @@ namespace com.novega.ludumdare48
                 button = "ButtonX";
             }
 
-            if (Input.GetButtonDown(button)) {
+            if (autoSkip)
+            {
+                skipTime += Time.deltaTime;
+            }
+
+            if (Input.GetButtonDown(button) || skipTime >= autoSkipInterval) {
                 dialogManager.Click_Window();
+                skipTime = 0f;
             }
         }
 
