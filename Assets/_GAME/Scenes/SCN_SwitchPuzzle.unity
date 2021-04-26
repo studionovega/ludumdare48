@@ -6782,10 +6782,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1298524404783677940, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
-      propertyPath: ChocoParticles
-      value: 
-      objectReference: {fileID: 8355490811770428278, guid: ea13e90265faa864595f21486a7237d3, type: 3}
     - target: {fileID: 1298524404783677941, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_RootOrder
       value: 4

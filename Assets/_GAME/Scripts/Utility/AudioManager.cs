@@ -11,6 +11,7 @@ namespace com.novega.ludumdare48
         public AudioClip chocolate;
         public AudioClip throwSwitch;
         public AudioClip bearTrap;
+        public AudioClip step;
         public static AudioManager self;
         AudioSource soundSource;
 

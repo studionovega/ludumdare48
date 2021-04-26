@@ -8,7 +8,7 @@ namespace com.novega.ludumdare48
     {
         private void OnTriggerEnter(Collider other)
         {
-            
+            AudioManager.self.PlayClip(AudioManager.self.bearTrap, 1f);
         }
     }
 }

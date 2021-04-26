@@ -32,6 +32,8 @@ namespace com.novega.ludumdare48
         [SerializeField] Slider sprintSlider, sanitySlider;
 
         [SerializeField] GameObject ChocoParticles;
+        [SerializeField] float footstepSpeed = 14f;
+        [SerializeField] float footstepTimer = 0f;
 
         private CharacterController _controller;
         private Animator _animator;
@@ -113,6 +115,17 @@ namespace com.novega.ludumdare48
                 motion = (hAxis * transform.right) + (vAxis * transform.forward);
                 storedMovement = new Vector2(hAxis, vAxis);
                 if (_animator) { _animator.SetBool("isMoving", true); }
+
+                footstepTimer += (footstepSpeed * moveMult * (rtxOn ? 3f : 1f)) * Time.deltaTime;
+                if (footstepTimer > 1)
+                {
+                    footstepTimer -= 1;
+                    if (isGrounded)
+                    {
+                        AudioManager.self.PlayClip(AudioManager.self.step, .3f);
+                    }
+                }
+
             }
             else
             {
@@ -120,6 +133,7 @@ namespace com.novega.ludumdare48
             }
 
             _controller.Move(motion * (moveSpeed * moveMult * (rtxOn ? 3f : 1f)) * Time.deltaTime);
+            
 
             velocity.y -= gravity * Time.deltaTime;
 
@@ -139,7 +153,7 @@ namespace com.novega.ludumdare48
                     }
                     else
                     {
-                        Debug.Log("Hit " + hit.collider.gameObject);
+                        //Debug.Log("Hit " + hit.collider.gameObject);
                     }
 
                     if (hit.collider.CompareTag("Spring"))
