@@ -1807,6 +1807,7 @@ MonoBehaviour:
   hands: {fileID: 1298524403556495875}
   sprintSlider: {fileID: 1074647811}
   sanitySlider: {fileID: 1787329690}
+  ChocoParticles: {fileID: 8355490811770428278, guid: ea13e90265faa864595f21486a7237d3, type: 3}
   hAxis: 0
   vAxis: 0
   isGrounded: 0
