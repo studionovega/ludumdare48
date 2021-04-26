@@ -84,7 +84,7 @@ MonoBehaviour:
   freezePlayer: 0
   dialogue: 710000007200000073000000
   dialogueCharacterOrder: 010000000100000001000000
-  nextDialogue: {fileID: 8036863285924430181, guid: 7dd1164951286a74e8c1eb9400aa0200, type: 3}
+  nextDialogue: {fileID: 5835369908390516447, guid: 6668bc4132a195f40ad5f25551553e34, type: 3}
   unskippableDialogueEntries: 
   hasCallback: 0
   _eventTrigger: 0
