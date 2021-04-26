@@ -1765,7 +1765,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 4.39
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   sprintMult: 1
   sanity: 100
   sanityDrainSpeed: 4
-  sanityWaitTimes: {x: 1, y: 5}
+  sanityWaitTimes: {x: 5, y: 15}
   gravity: 40
   jumpHeight: 5
   springHeight: 20
@@ -1808,6 +1808,8 @@ MonoBehaviour:
   sprintSlider: {fileID: 1074647811}
   sanitySlider: {fileID: 1787329690}
   ChocoParticles: {fileID: 8355490811770428278, guid: ea13e90265faa864595f21486a7237d3, type: 3}
+  footstepSpeed: 4
+  footstepTimer: 0
   hAxis: 0
   vAxis: 0
   isGrounded: 0
