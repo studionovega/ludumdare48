@@ -35,7 +35,7 @@ namespace com.novega.ludumdare48
             else
             {
                 countdownTime -= Time.deltaTime * 2f;
-                countdownText.text = Mathf.Ceil(countdownTime / 2f).ToString();
+                countdownText.text = Mathf.Ceil((countdownTime) / 2f).ToString();
             }
         }
 

@@ -58,15 +58,13 @@ namespace com.novega.ludumdare48
 
             if (song == null)
             {
-                Debug.Log("That AudioClip is null!");
+                Debug.LogError("That AudioClip is null!");
                 return;
             }
             //Play song only if not already playing that soooong.
             if (currentSong != song)
             {
-
                 _source.clip = song;
-                _source.Play();
 
                 if (song == spoomk)
                 {
@@ -76,6 +74,7 @@ namespace com.novega.ludumdare48
                 {
                     _source.time = 0;
                 }
+                _source.Play();
             }
             currentSong = song;
         }
