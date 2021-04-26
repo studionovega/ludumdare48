@@ -362,7 +362,7 @@ namespace com.novega.ludumdare48
                     GameObject g = Instantiate(ChocoParticles);
                     g.transform.position = other.gameObject.transform.position;
                     AudioManager.self.PlayClip(AudioManager.self.chocolate, 1f);
-                    Destroy(other.gameObject);
+                    StartCoroutine(Spawn(other.gameObject, 30f));
                     sanity += 50f;
                     if (sanity > 100f)
                     {
@@ -405,6 +405,15 @@ namespace com.novega.ludumdare48
                 cameraTilt.tiltY = 0;
                 cameraTilt.tiltZ = 0;
             }
+        }
+
+        private IEnumerator Spawn(GameObject target, float seconds)
+        {
+            Debug.Log("Deactivating " + target);
+            target.SetActive(false);
+            yield return new WaitForSeconds(seconds);
+            target.SetActive(true);
+            Debug.Log("Respawned " + target);
         }
     }
 }
