@@ -8,7 +8,7 @@ namespace com.novega.ludumdare48
     public class UIS_PowerIndicator : MonoBehaviour
     {
         [SerializeField] CharacterMovement player;
-        [SerializeField] Sprite noneSprite, controlFlipSprite, bunnyHopSprite, drunkModeSprite, hyperfocusSprite;
+        [SerializeField] Sprite noneSprite, controlFlipSprite, bunnyHopSprite, drunkModeSprite, hyperfocusSprite, joyconDriftSprite, demHandsSprite, rtxOnSprite;
 
         Image powerImage;
 
@@ -43,6 +43,21 @@ namespace com.novega.ludumdare48
             if (player.hyperfocus)
             {
                 powerImage.sprite = hyperfocusSprite;
+            }
+            
+            if (player.joyconDrift)
+            {
+                powerImage.sprite = joyconDriftSprite;
+            }
+
+            if (player.demHands)
+            {
+                powerImage.sprite = demHandsSprite;
+            }
+
+            if (player.rtxOn)
+            {
+                powerImage.sprite = rtxOnSprite;
             }
         }
     }
