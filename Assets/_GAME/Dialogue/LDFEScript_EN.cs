@@ -159,6 +159,48 @@ namespace com.novega.ludumdare48
             characterScript.Add("(It seems like they're having trouble \nreaching you. They're screaming \ninto their microphone.)");
             // [00049]
             characterScript.Add("/s/RICO:/e/ \nwhere even am i?");
+
+            // SCENE: Level 3 ---------------------------------------------------------------------------------------------------------------------------
+            // [00050]
+            characterScript.Add("/s/RICO:/e/ \nalright, I finished that stupid \npuzzle. you gonna tell me what you \njust stabbed me with now bro?");
+            // [00051]
+            characterScript.Add("/s/HANS:/e/ \n...");
+            // [00052]
+            characterScript.Add("/s/HANS:/e/ \nI don't know what you're talking \nabout.");
+            // [00053]
+            characterScript.Add("/s/DELLA:/e/ \nlol, That's Code For ''You \nFuckin' Wish''.");
+            // [00054]
+            characterScript.Add("/s/RICO:/e/ \nyou guys are unbelievable.");
+            // [00055]
+            characterScript.Add("/s/HANS:/e/ \nyou're the one who agreed to me \nstabbing you with a syringe.");
+            // [00056]
+            characterScript.Add("/s/RICO:/e/ \num, /i/sorry/ei/, can you /i/pinpoint/ei/ the \nmoment in time when i /i/agreed/ei/ to \nbeing stabbed with a fucking syringe?");
+            // [00057]
+            characterScript.Add("/s/HANS:/e/ \nYes, I can actually! It was the moment when I signed the contract with your finger after you passed out./wait:0.25//skip/.");
+            // [00058]
+            characterScript.Add("/s/RICO:/e/ \n/i/you wot m8/ei/?");
+            // [00059]
+            characterScript.Add("/s/HANS:/e/ \nHey, don't look a gift horse in the mouth \nkid. You can't afford a gram of anything \nelse and I stabbed you with that syringe \nfree of charge.");
+            // [00060]
+            characterScript.Add("/s/RICO:/e/ \n...");
+            // [00061]
+            characterScript.Add("(Rico lets out a sigh of pure, \nunadulterated self-disappointment.)");
+            // [00062]
+            characterScript.Add("/s/RICO:/e/ \nfine.");
+            // [00063]
+            characterScript.Add("(Rico makes a note to himself to \ndrive his hotboxing car into a lake \nafter he escapes.)");
+
+            // SCENE: Level 4 ---------------------------------------------------------------------------------------------------------------------------
+            // [00053]
+            characterScript.Add("/s/DELLA:/e/ \nAlright, Mr. Rico. Hans Is Away From The Walkie-Talkies At The Moment, but Let Me Just Say...");
+            // [00053]
+            characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far. We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
+            // [00062]
+            characterScript.Add("/s/RICO:/e/ \noh thank god. /wait:0.25/I mean-/skip/-");
+            // [00062]
+            characterScript.Add("/s/RICO:/e/ \nSounds Great!");
+            // [00053]
+            characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far. We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
         }
 
         public virtual void DefineUI()

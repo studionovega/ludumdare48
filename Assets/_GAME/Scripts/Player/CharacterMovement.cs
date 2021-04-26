@@ -23,7 +23,8 @@ namespace com.novega.ludumdare48
         [SerializeField] Transform footstepsSpawn;
         [SerializeField] GameObject footstepParticles;
         [SerializeField] GameObject gameOverScreen;
-        [SerializeField] PlayRandomSound jumpSound;
+        [SerializeField] PlayRandomSound jumpSound, footstepSound;
+        [SerializeField] AudioSource warningSound, warningFinishSound, lavaSizzleSound;
         //for drunkenness
         [SerializeField] CameraTilt cameraTilt;
         [SerializeField] CameraBob cameraBob;
@@ -122,7 +123,7 @@ namespace com.novega.ludumdare48
                     footstepTimer -= 1;
                     if (isGrounded)
                     {
-                        AudioManager.self.PlayClip(AudioManager.self.step, .3f);
+                        footstepSound.PlayRandom();
                     }
                 }
 
@@ -250,11 +251,13 @@ namespace com.novega.ludumdare48
             rolling = true;
 
             // wait for a random amount of time, then reroll
-            yield return new WaitForSeconds(Random.Range(sanityWaitTimes.x, sanityWaitTimes.y));
+            yield return new WaitForSecondsRealtime(Random.Range(sanityWaitTimes.x, sanityWaitTimes.y));
 
             // warn player
             warnTrigger = true;
-            yield return new WaitForSeconds(1.5f);
+            warningSound.Play();
+            yield return new WaitForSecondsRealtime(1.5f);
+            warningSound.Stop();
 
             // pick a number
             float pick = Random.Range(1f, 100f);
@@ -275,6 +278,7 @@ namespace com.novega.ludumdare48
                         // control flip
                         controlFlip = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: CONTROL FLIP");
                         break;
                     case 1:
@@ -282,12 +286,14 @@ namespace com.novega.ludumdare48
                         cam.fieldOfView = 30f;
                         hyperfocus = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: HYPERFOCUS");
                         break;
                     case 2:
                         // bunny hop
                         bunnyHop = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: BUNNY HOP");
                         break;
                     case 3:
@@ -295,6 +301,7 @@ namespace com.novega.ludumdare48
                         SetDrunk(true);
                         drunkMode = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: DRUNKEN SAILOR");
                         break;
                     case 4:
@@ -303,6 +310,7 @@ namespace com.novega.ludumdare48
                         cameraTilt.tiltYSpeed = 0.6f;
                         joyconDrift = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: JOYCON DRIFT");
                         break;
                     case 5:
@@ -310,6 +318,7 @@ namespace com.novega.ludumdare48
                         hands.ActivateHands(7);
                         demHands = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: HANDS?");
                         break;
                     case 6:
@@ -317,6 +326,7 @@ namespace com.novega.ludumdare48
                         cam.fieldOfView = 120f;
                         rtxOn = true;
                         noPowers = false;
+                        warningFinishSound.Play();
                         Debug.Log("Roll: RTX ON");
                         break;
                 }
@@ -370,7 +380,17 @@ namespace com.novega.ludumdare48
                     }
                     break;
                 case "TriggerDeath":
-                    CommitDie();
+                    if (!gameOver)
+                    {
+                        CommitDie();
+                    }
+                    break;
+                case "Lava":
+                    if (!gameOver)
+                    {
+                        lavaSizzleSound.Play();
+                        CommitDie();
+                    }
                     break;
             }
         }

@@ -8,6 +8,7 @@ TagManager:
   - SanityBottle
   - TriggerDeath
   - Spring
+  - Lava
   layers:
   - Default
   - TransparentFX

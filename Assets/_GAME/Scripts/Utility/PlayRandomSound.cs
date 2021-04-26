@@ -8,6 +8,8 @@ namespace com.novega.ludumdare48
     {
         public AudioSource source;
         public AudioClip[] sounds;
+        public bool pitchBend = false;
+        public Vector2 pitchMinMax;
 
         int recent = 0;
 
@@ -16,6 +18,10 @@ namespace com.novega.ludumdare48
             int i = Random.Range(0, sounds.Length - 1);
 
             source.clip = sounds[i];
+            if (pitchBend)
+            {
+                source.pitch = Random.Range(pitchMinMax.x, pitchMinMax.y);
+            }
             source.Play();
         }
 
@@ -35,6 +41,10 @@ namespace com.novega.ludumdare48
 
             recent = i;
 
+            if (pitchBend)
+            {
+                source.pitch = Random.Range(pitchMinMax.x, pitchMinMax.y);
+            }
             source.PlayOneShot(sounds[i], volumeScale);
         }
     }

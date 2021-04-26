@@ -222,6 +222,6 @@ MonoBehaviour:
     showEyeDropper: 1
   balance:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 20
     min: -100
     max: 100
