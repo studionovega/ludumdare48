@@ -62,6 +62,7 @@ namespace com.novega.ludumdare48
             gameRef.gameStarted = true;
             CharacterMovement.freezeMovement = false;
             runTimer = true;
+            MusicManager.self.PlayMusic(MusicManager.self.spoomk);
             Debug.Log("Finished countdown");
         }
     }
