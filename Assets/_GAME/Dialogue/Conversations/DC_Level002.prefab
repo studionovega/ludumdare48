@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7693721859568902619}
   - component: {fileID: 7693721859568902616}
   m_Layer: 5
-  m_Name: DC_Level001
+  m_Name: DC_Level002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   SEAudio: {fileID: 7693721859568902619}
   CallAudio: {fileID: 7693721859568902616}
   interactAudio: {fileID: 8300000, guid: 993967dc5bdbc6343b37b13b01405edd, type: 3}
-  Delay: 0.035
+  Delay: 0.015
   state: 0
   Result: 
 --- !u!114 &7693721859568902561
@@ -210,6 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b719a8329a0594f901372dd28e5858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoSkip: 1
+  autoSkipInterval: 5
   startAfterSeconds: 0
   seconds: 0
   freezePlayer: 0

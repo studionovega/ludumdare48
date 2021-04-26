@@ -31,7 +31,13 @@ namespace com.novega.ludumdare48
             /* [00001]*/
             characterCast.Add("System");
             /* [00002]*/
-            characterCast.Add("Ally");
+            characterCast.Add("Ally"); // test character
+            /* [00003]*/
+            characterCast.Add("Rico");
+            /* [00004]*/
+            characterCast.Add("Della");
+            /* [00005]*/
+            characterCast.Add("Hans");
         }
 
         public virtual void DefineScript()
@@ -45,7 +51,7 @@ namespace com.novega.ludumdare48
             // [00002]
             characterScript.Add("/s/ANGIE:/e/ \nTo get to this scene, just set the DDS_Autoplay script's dialogue array to 0-1/skip/!");
             // [00003]
-            characterScript.Add("(They aren't actually talking. It's kind of...creepy.)");
+            characterScript.Add("fuck.");
 
             // [00004]
             characterScript.Add("...");
@@ -54,15 +60,15 @@ namespace com.novega.ludumdare48
             // [00005]
             characterScript.Add("so this is like,");
             // [00006]
-            characterScript.Add("it, I guess.");
+            characterScript.Add("/speed:0.1/it,/wait:0.5//speed:0.05/ I guess.");
             // [00007]
             characterScript.Add("my hands feel solid...");
             // [00008]
             characterScript.Add("...like oatmeal.");
             // [00009]
-            characterScript.Add("my eyes feel...red.");
+            characterScript.Add("my eyes feel.../wait:0.5//i/red/ei/.");
             // [00010]
-            characterScript.Add("i've tripped over three different cracks in the sidewalks like, 3 times now.");
+            characterScript.Add("i've tripped over three different cracks in the \nsidewalks like, three times now.");
             // [00004] -----------------------------------------------------------------------------------------------
             // "..." -------------------------------------------------------------------------------------------------
             // [00011]
@@ -70,17 +76,17 @@ namespace com.novega.ludumdare48
             // [00012]
             characterScript.Add("i'm, like...");
             // [00013]
-            characterScript.Add("...lacking corporeal form bro.");
+            characterScript.Add("...lacking corporeal form, bro.");
             // [00004] -----------------------------------------------------------------------------------------------
             // "..." -------------------------------------------------------------------------------------------------
             // [00014]
-            characterScript.Add("then again I did just get like, stabbed in the shoulder with, like, a syringe.");
+            characterScript.Add("then again... /click/\nI did just get like, stabbed in the shoulder with a syringe.");
             // [00015]
-            characterScript.Add("maybe that had something to do with it.");
+            characterScript.Add("i do make some good points.");
             // [00004] -----------------------------------------------------------------------------------------------
             // "..." -------------------------------------------------------------------------------------------------
             // [00016]
-            characterScript.Add("yeah wait, what the fuck? i can still hear this asshole calling my name.");
+            characterScript.Add("yeah wait, what the fuck? i just heard that \nasshole call my name again.");
             // [00017]
             characterScript.Add("can dead people like, hear the living?");
             // [00004] -----------------------------------------------------------------------------------------------
@@ -90,11 +96,11 @@ namespace com.novega.ludumdare48
             // [00019]
             characterScript.Add("(Rico opens his eyes.)");
             // [00020]
-            characterScript.Add("fuck.");
+            characterScript.Add("oh.");
 
             // SCENE: Level 2 ---------------------------------------------------------------------------------------------------------------------------
             // [00021]
-            characterScript.Add("/s/HANS:/e/ \nRICO? RICO MY GOOD SIR, CAN YOU HEAR ME?");
+            characterScript.Add("/s/HANS:/e/ \nRICO? RICO MY GOOD SIR, CAN YOU \nHEAR ME?");
             // [00022]
             characterScript.Add("/s/RICO:/e/ \nwheuh ?????");
             // [00023]
@@ -102,19 +108,19 @@ namespace com.novega.ludumdare48
             // [00024]
             characterScript.Add("/s/RICO:/e/ \noh, yeah. wuzzup.");
             // [00025]
-            characterScript.Add("/s/HANS:/e/ \nGood. Welcome to Science Lab Industrial Incorporated Industries, or in other words, SLIII.");
+            characterScript.Add("/s/HANS:/e/ \nGood. Welcome to Science Lab \nIndustrial Incorporated Industries, \nor in other words, SLIII.");
             // [00026]
-            characterScript.Add("/s/RICO:/e/ \n...i don't know where we're at right now but this place kinda looks like an insane asylum /skip/.");
+            characterScript.Add("/s/RICO:/e/ \n...i don't know where we're at right \nnow but this place kinda looks like \nan insane asylum /skip/.");
             // [00027]
             characterScript.Add("/s/HANS:/e/ \nNo.");
             // [00028]
-            characterScript.Add("/s/HANS:/e/ \n...No. I have a PHD, this is totally cerified.");
+            characterScript.Add("/s/HANS:/e/ \n...No. I have a PHD, this is totally \ncerified.");
             // [00029]
-            characterScript.Add("/s/RICO:/e/ \na PHD is just a meaningless piece of paper brah.");
+            characterScript.Add("/s/RICO:/e/ \na PHD is just a meaningless piece of \npaper brah.");
             // [00030]
-            characterScript.Add("/s/RICO:/e/ \nwhat the fuck is /i/''SLIII''/ei/ anyways? you still haven’t told me yet.");
+            characterScript.Add("/s/RICO:/e/ \nwhat the fuck is /i/''SLIII''/ei/ anyways? \nyou still haven't told me yet.");
             // [00031]
-            characterScript.Add("/s/HANS:/e/ \nDon't you, ''like'', /i/work here/ei/, ''dude''? You should know this stuff by now."); // imitating Rico
+            characterScript.Add("/s/HANS:/e/ \nDon't you, ''like'', /i/work here/ei/, /speed:down/''dude''? /wait:0.25//speed:up/\nYou should know this stuff by now."); // imitating Rico
             // [00032]
             characterScript.Add("/s/RICO:/e/ \nokay, brah i know i'm wasted as fuck right now but i swear i'm not a dumbass.");
             // [00033]
@@ -126,7 +132,7 @@ namespace com.novega.ludumdare48
             // [00036]
             characterScript.Add("/s/RICO:/e/ \n...wait who's the chick");
             // [00037]
-            characterScript.Add("/s/DELLA:/e/ \nDella Vasquez, Reporting For Call Of Duty! /click/I'm Here To Assist You And Mr. Reuter, In An Assistant - Like Fashion.");
+            characterScript.Add("/s/DELLA:/e/ \nDella Vasquez, Reporting For Call Of Duty! /click/I'm Here To Assist You And Mr. Reuter, In An Assistant-Like Fashion.");
             // [00038]
             characterScript.Add("/s/RICO:/e/ \noooookay. well, i have a few questions.");
             // [00039]
@@ -144,13 +150,13 @@ namespace com.novega.ludumdare48
 
             // SCENE: Level 1 ---------------------------------------------------------------------------------------------------------------------------
             // [00045]
-            characterScript.Add("/s/HANS:/e/ \nRICO? RIC/i/~bzzt~/ei/, CA/i/~bzzt~/ei/AR ME? /i/~bzzt~/ei/");
+            characterScript.Add("/s/HANS:/e/ \nRICO? RIC/i/~bzzt~/ei/, CA/i/~bzzt~/ei/AR ME? \n/i/~bzzt~/ei/");
             // [00046]
             characterScript.Add("/s/RICO:/e/ \n...?");
             // [00047]
-            characterScript.Add("(Someone appears to be calling you, Rico Guzman, from a mysterious walkie-talkie holstered on your hip.)");
+            characterScript.Add("(A mysterious man appears to be \ncalling you, /i/(rico guzman)/ei/, from an \nequally mysterious walkie-talkie \nholstered on your hip.)");
             // [00048]
-            characterScript.Add("(It seems like they're having trouble reaching you.)");
+            characterScript.Add("(It seems like they're having trouble \nreaching you. They're screaming \ninto their microphone.)");
             // [00049]
             characterScript.Add("/s/RICO:/e/ \nwhere even am i?");
         }

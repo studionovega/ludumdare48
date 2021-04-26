@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  dialogueTrigger: 0
   seconds: 0.5
   objects:
   - {fileID: 113306439647869635, guid: 1f237cf448d8e2c4690eba3de17c4ac6, type: 3}
@@ -810,7 +811,7 @@ MonoBehaviour:
   startTween: 0
   type: ImageAlpha
   activateAfterWait: 1
-  waitSeconds: 2
+  waitSeconds: 2.75
   seconds: 1.25
   backupLerp: 0.25
   toFloat: 0.04
@@ -830,7 +831,7 @@ MonoBehaviour:
   startTween: 0
   type: Scale
   activateAfterWait: 1
-  waitSeconds: 2
+  waitSeconds: 2.6
   seconds: 0.5
   backupLerp: 0.25
   toFloat: 1
