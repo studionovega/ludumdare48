@@ -1807,6 +1807,7 @@ MonoBehaviour:
   hands: {fileID: 1298524403556495875}
   sprintSlider: {fileID: 1074647811}
   sanitySlider: {fileID: 1787329690}
+  ChocoParticles: {fileID: 8355490811770428278, guid: ea13e90265faa864595f21486a7237d3, type: 3}
   hAxis: 0
   vAxis: 0
   isGrounded: 0
@@ -2375,6 +2376,9 @@ MonoBehaviour:
   bunnyHopSprite: {fileID: 21300000, guid: 578dca4bb486106438eabad2d4332c66, type: 3}
   drunkModeSprite: {fileID: 21300000, guid: 055c44a6ee790d743bcf692c99bfef6c, type: 3}
   hyperfocusSprite: {fileID: 21300000, guid: a40b9595fc62dd04495c0f38660b4e00, type: 3}
+  joyconDriftSprite: {fileID: 0}
+  demHandsSprite: {fileID: 0}
+  rtxOnSprite: {fileID: 0}
 --- !u!1 &9190394322062198298
 GameObject:
   m_ObjectHideFlags: 0
