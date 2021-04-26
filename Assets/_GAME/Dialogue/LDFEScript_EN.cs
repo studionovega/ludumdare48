@@ -191,16 +191,56 @@ namespace com.novega.ludumdare48
             characterScript.Add("(Rico makes a note to himself to \ndrive his hotboxing car into a lake \nafter he escapes.)");
 
             // SCENE: Level 4 ---------------------------------------------------------------------------------------------------------------------------
-            // [00053]
+            // [00064]
             characterScript.Add("/s/DELLA:/e/ \nAlright, Mr. Rico. Hans Is Away From The Walkie-Talkies At The Moment, but Let Me Just Say...");
-            // [00053]
+            // [00065]
             characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far. We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
-            // [00062]
+            // [00066]
             characterScript.Add("/s/RICO:/e/ \noh thank god. /wait:0.25/I mean-/skip/-");
-            // [00062]
+            // [00067]
             characterScript.Add("/s/RICO:/e/ \nSounds Great!");
-            // [00053]
-            characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far. We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
+            // [00068]
+            characterScript.Add("/s/DELLA:/e/ \nNah, I Get It. Hans Can Be Kind Of An Ass Sometimes.");
+            // [00069] haha nice
+            characterScript.Add("/s/DELLA:/e/ \nHere, I Know He Was Being Stubborn Earlier, and I Feel Like You Should At Least Know What The Hell He Stabbed You With.");
+            // [00070]
+            characterScript.Add("/s/DELLA:/e/ \nPretend I Said Nothing, But The Drug That You Were Injected With Is Called- /wait:0.5/in his words, not mine-/wait:0.5/ ''Methamphetamine 2, Electric Boogaloo''.");
+            // [00071]
+            characterScript.Add("/s/RICO:/e/ \nsounds like our friend is pretty great with names.");
+            // [00072]
+            characterScript.Add("/s/DELLA:/e/ \nThe Best.");
+            // [00073]
+            characterScript.Add("/s/DELLA:/e/ \nAnyways, Research Suggests That There Could Be A Possible Correlation Between Taking It.../wait:0.5/and Possessing Abnormally Large Genitalia.");
+            // [00074]
+            characterScript.Add("/s/DELLA:/e/ \nHe Just Didn't Want To Risk It Backfiring On Him, So He Hired You To Test It For Him.");
+            // [00075]
+            characterScript.Add("/s/RICO:/e/ \n.../click/huh.");
+            // [00076]
+            characterScript.Add("/s/RICO:/e/ \nwell, i suppose there's a bright side to this then.");
+            // [00077]
+            characterScript.Add("/s/DELLA:/e/ \n/i/Yeah/ei/, You Truly /i/Took One For The Team/ei/ With This One. Congrats On Somehow Getting Here Alive.");
+            // [00078]
+            characterScript.Add("/s/RICO:/e/ \nthank you, i'm glad to be making a contribution to society.");
+            // [00079]
+            characterScript.Add("/s/RICO:/e/ \nbut wait.../wait:0.25/if you're working for Hans, then why are you helping me out?");
+            // [00080]
+            characterScript.Add("/s/DELLA:/e/ \nWell, Don't Get Me Wrong- Hans Is A Surprisingly Good Boss.");
+            // [00081]
+            characterScript.Add("/s/RICO:/e/ \nemphasis on ''surprisingly''.");
+            // [00082]
+            characterScript.Add("/s/DELLA:/e/ \nBut He Can Also Be Stubborn Sometimes. When That Happens, It's My Turn To Step In.");
+            // [00083]
+            characterScript.Add("/s/DELLA:/e/ \nConsider It A Way To Tip The Scale Back.");
+            // [00084]
+            characterScript.Add("/s/RICO:/e/ \nwell.../wait:0.5/ thank you. /click/ i appreciate it.");
+            // [00085]
+            characterScript.Add("/s/DELLA:/e/ \nNo Problem. /click/Finish The Puzzle And Let's Get Going.");
+            // [00086]
+            characterScript.Add("/s/RICO:/e/ \naye aye, capt-ette.");
+            // [00087]
+            characterScript.Add("/s/DELLA:/e/ \nplease don't ever say that again.");
+            // [00088]
+            characterScript.Add("/s/RICO:/e/ \nsure.");
         }
 
         public virtual void DefineUI()
