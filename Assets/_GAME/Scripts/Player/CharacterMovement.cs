@@ -182,7 +182,7 @@ namespace com.novega.ludumdare48
                 springTrigger = false;
             }
 
-            if (Input.GetButton("Sprint") && sprintMeter >= Time.deltaTime * 30f && !sprintDepleted)
+            if (Input.GetButton("Sprint") && sprintMeter >= Time.deltaTime * 30f && !sprintDepleted && gameRef.gameStarted)
             {
                 moveMult = sprintMult;
                 sprintMeter -= Time.deltaTime * 30f;
