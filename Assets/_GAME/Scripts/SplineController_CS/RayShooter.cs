@@ -44,7 +44,7 @@ namespace com.novega.ludumdare48
                 {
                     cursorObject.SetActive(true);
                     crosshairObject.SetActive(false);
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetButtonDown("Interact"))
                     {
                         target.ReactToHit();
                     }

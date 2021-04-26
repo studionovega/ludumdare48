@@ -5004,10 +5004,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 650249504, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
-      propertyPath: m_text
-      value: LEVEL 1 - "SYRINGES"
-      objectReference: {fileID: 0}
     - target: {fileID: 1298524404783677941, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5060,10 +5056,6 @@ PrefabInstance:
       propertyPath: gameRef
       value: 
       objectReference: {fileID: 216361244}
-    - target: {fileID: 8820418664411801516, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
-      propertyPath: m_Volume
-      value: 0.382
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
 --- !u!1001 &1978097475284409150

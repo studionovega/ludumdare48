@@ -10,7 +10,7 @@ namespace com.novega.ludumdare48
         [SerializeField] float moveSpeed = 1f;
         [SerializeField] float sprintMeter = 100.0f;
         [SerializeField] float sprintMult = 1f;
-        [SerializeField] float sanity = 100.0f;
+        public float sanity = 100.0f;
         [SerializeField] float sanityDrainSpeed = 1f;
         [SerializeField] Vector2 sanityWaitTimes = new Vector2(1, 10);
         [SerializeField] float gravity = 40.0f;
