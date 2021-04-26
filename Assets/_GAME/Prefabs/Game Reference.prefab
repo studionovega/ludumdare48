@@ -182,3 +182,4 @@ MonoBehaviour:
   chocolate: {fileID: 8300000, guid: 4dc098fe027622f43a8c37491170d35b, type: 3}
   throwSwitch: {fileID: 8300000, guid: 91d7f7365474ab14b81662982216bfad, type: 3}
   bearTrap: {fileID: 8300000, guid: 430098c698eb3d94696d3c028098f6cc, type: 3}
+  step: {fileID: 8300000, guid: 12986128cb14d624dba3e49dc318994f, type: 3}
