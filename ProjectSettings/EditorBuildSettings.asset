@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/SCN_Level_3.unity
     guid: 7e2a691a86c3fb14c89a708dd1e248d7
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/SCN_Level_2.unity
+    guid: 1d43fd26c47cbb04f93a99bd6d41ee22
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/SCN_Level_4.unity
+    guid: 296cc8004e2bd12438c65d294cd63867
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/SCN_Level_5.unity
+    guid: ddcf053d4c90a8145a3203ae39d591cb
   m_configObjects: {}
