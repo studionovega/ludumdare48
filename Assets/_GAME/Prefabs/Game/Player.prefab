@@ -1788,7 +1788,7 @@ MonoBehaviour:
   sprintMult: 1
   sanity: 100
   sanityDrainSpeed: 4
-  sanityWaitTimes: {x: 1, y: 5}
+  sanityWaitTimes: {x: 5, y: 10}
   gravity: 40
   jumpHeight: 5
   springHeight: 20
