@@ -352,6 +352,15 @@ namespace com.novega.ludumdare48
             Cursor.lockState = CursorLockMode.None;
             gameOver = true;
             gameRef.gameStarted = false;
+
+            if (Random.Range(0,100) < 5)
+            {
+                MusicManager.self.PlayMusic(MusicManager.self.gameOverB);
+            }
+            else
+            {
+                MusicManager.self.PlayMusic(MusicManager.self.gameOver);
+            }
         }
 
         private void OnTriggerEnter(Collider other)

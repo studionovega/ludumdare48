@@ -55,6 +55,8 @@ namespace com.novega.ludumdare48
             countdownTextObject.SetActive(true);
             gameRef.gameStarted = false;
 
+            MusicManager.self.PauseMusic();
+
             yield return new WaitForSeconds(countdownTime / 2f);
 
             countdownTextObject.SetActive(false);
