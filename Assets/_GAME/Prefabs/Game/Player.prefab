@@ -2240,7 +2240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -48}
   m_SizeDelta: {x: 12, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2956413507719222994
@@ -2373,8 +2373,11 @@ MonoBehaviour:
   noneSprite: {fileID: 21300000, guid: 3b30b24e8589a194f8c80fa9e33bf611, type: 3}
   controlFlipSprite: {fileID: 21300000, guid: 989319985e972b64d98dec86309c23f8, type: 3}
   bunnyHopSprite: {fileID: 21300000, guid: 578dca4bb486106438eabad2d4332c66, type: 3}
-  drunkModeSprite: {fileID: 21300000, guid: 055c44a6ee790d743bcf692c99bfef6c, type: 3}
+  drunkModeSprite: {fileID: 21300000, guid: 24c8f53d8a0329d478f7995a374cad1b, type: 3}
   hyperfocusSprite: {fileID: 21300000, guid: a40b9595fc62dd04495c0f38660b4e00, type: 3}
+  joyconDriftSprite: {fileID: 21300000, guid: 51811cd169f05a948974be84dab17a73, type: 3}
+  demHandsSprite: {fileID: 21300000, guid: dd90c7c8c285c4542be46c389170624b, type: 3}
+  rtxOnSprite: {fileID: 21300000, guid: 3e438f5b3f76d004f8b352091f475b90, type: 3}
 --- !u!1 &9190394322062198298
 GameObject:
   m_ObjectHideFlags: 0
