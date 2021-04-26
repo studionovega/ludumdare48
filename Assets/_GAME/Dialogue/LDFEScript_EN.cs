@@ -162,7 +162,7 @@ namespace com.novega.ludumdare48
 
             // SCENE: Level 3 ---------------------------------------------------------------------------------------------------------------------------
             // [00050]
-            characterScript.Add("/s/RICO:/e/ \nalright, I finished that stupid \npuzzle. you gonna tell me what you \njust stabbed me with now bro?");
+            characterScript.Add("/s/RICO:/e/ \nalright, I finished that stupid \npuzzle. you gonna tell me what you \nkeep stabbing me with bro?");
             // [00051]
             characterScript.Add("/s/HANS:/e/ \n...");
             // [00052]
@@ -239,8 +239,70 @@ namespace com.novega.ludumdare48
             characterScript.Add("/s/RICO:/e/ \naye aye, capt-ette.");
             // [00087]
             characterScript.Add("/s/DELLA:/e/ \nplease don't ever say that again.");
+
+            // SCENE: Level 5 ---------------------------------------------------------------------------------------------------------------------------
             // [00088]
-            characterScript.Add("/s/RICO:/e/ \nsure.");
+            characterScript.Add("/s/HANS:/e/ \nAll right, Rico. Today is your lucky day!");
+            // [00089]
+            characterScript.Add("/s/HANS:/e/ \nThese tests appear to be yielding nothing, so we're going to be letting you go after this one.");
+            // [00090]
+            characterScript.Add("(Rico chooses to ignore the fact that he's been stuck with multiple syringes for about a week now only for nothing to come out of it.)");
+            // [00091]
+            characterScript.Add("/s/RICO:/e/ \ni suppose it really is like my lucky day then.");
+            // [00092]
+            characterScript.Add("/s/RICO:/e/ \nthank you for taking away my option to withdraw from this experiment for the past week.");
+            // [00093]
+            characterScript.Add("/s/RICO:/e/ \n/i/so grateful/ei/.");
+            // [00094]
+            characterScript.Add("/s/HANS:/e/ \nYou're welcome, my good sir! I can't ever say no to a patient.");
+            // [00095]
+            characterScript.Add("/s/RICO:/e/ \n*sigh*");
+            // [00096]
+            characterScript.Add("/s/RICO:/e/ \njust pass the walkie-talkie to della.");
+            // [00097]
+            characterScript.Add("/s/HANS:/e/ \nSure thing, Rico.");
+            // [00004] ...
+            // [00098]
+            characterScript.Add("/s/DELLA:/e/ \nHey Rico, What's Up?");
+            // [00099]
+            characterScript.Add("/s/RICO:/e/ \noh no, sorry; nothing. bird dick up there was just giving me a headache.");
+            // [00100]
+            characterScript.Add("/s/DELLA:/e/ \nAs Per Usual.");
+            // [00101]
+            characterScript.Add("/s/DELLA:/e/ \nWell, At Least This Is The End Of It. After This, You Won't Ever Have To See That Duck's Face Again.");
+            // [00102]
+            characterScript.Add("/s/RICO:/e/ \nthank GOOOOOOOOOOOOD. /wait:0.25/.../wait:0.25/i guess.");
+            // [00004] ...
+            // [00103]
+            characterScript.Add("/s/RICO:/e/ \ny'know, /wait:0.25/i know i still hate Hans' guts and all, and that's not going to change any time soon-");
+            // [00104]
+            characterScript.Add("/s/RICO:/e/ \nbut, /wait:0.25/you seem pretty cool. /click/you've got a Chattr?");
+            // [00105]
+            characterScript.Add("(Della blushes slightly- in an awkward, yamete-like fashion.)");
+            // [00106]
+            characterScript.Add("(She realizes it almost instantly, and quickly shifts her eyes towards Rico from the glass.)");
+            // [00107]
+            characterScript.Add("/s/DELLA:/e/ \n...Uhh...Priorities, Bro?");
+            // [00108]
+            characterScript.Add("(She gives Rico a sarcastic smirk.)");
+            // [00109]
+            characterScript.Add("/s/DELLA:/e/ \nTry Not To Get Your Ass Burnt To A Crisp In The Lava First, Then We'll Talk.");
+            // [00110]
+            characterScript.Add("/s/RICO:/e/ \n/i/pft/ei/, game on.");
+
+            // SCENE: End Monologue ---------------------------------------------------------------------------------------------------------------------------
+            // [00111]
+            characterScript.Add("and then they dated for, like, 12 seconds before Rico grew a package so abnormally large that it anchored him permanently to the ground and caused him to die from asphyxiation.");
+            // [00112]
+            characterScript.Add("truly a harrowing story. /wait:1/\nok you can go now, thanks for playing.");
+
+            // SCENE: Monologue 3 -----------------------------------------------------------------------------------------------------------------------------
+            // [00113]
+            characterScript.Add("Rico had made it to the end of the parkour course, before passing out for a third time.");
+            // [00114]
+            characterScript.Add("When he woke up, he noticed a visible scratch on his left face cheek- presumably from being dragged across a concrete floor.");
+            // [00115]
+            characterScript.Add("Unknowing of how he ended up in a position like this just from going outside for his daily weed run, he begins to press Hans for an answer.");
         }
 
         public virtual void DefineUI()
