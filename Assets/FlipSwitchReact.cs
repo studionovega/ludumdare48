@@ -9,6 +9,7 @@ namespace com.novega.ludumdare48
         public void React()
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z * -1);
+            AudioManager.self.PlayClip(AudioManager.self.throwSwitch, 1f);
         }
     }
 }
