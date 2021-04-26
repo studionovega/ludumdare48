@@ -31,6 +31,8 @@ namespace com.novega.ludumdare48
         [SerializeField] Hands hands;
         [SerializeField] Slider sprintSlider, sanitySlider;
 
+        [SerializeField] GameObject ChocoParticles;
+
         private CharacterController _controller;
         private Animator _animator;
         private GameReference gameRef;
@@ -343,6 +345,9 @@ namespace com.novega.ludumdare48
             switch (other.tag)
             {
                 case "SanityBottle":
+                    GameObject g = Instantiate(ChocoParticles);
+                    g.transform.position = other.gameObject.transform.position;
+                    AudioManager.self.PlayClip(AudioManager.self.chocolate, 1f);
                     Destroy(other.gameObject);
                     sanity += 50f;
                     if (sanity > 100f)
