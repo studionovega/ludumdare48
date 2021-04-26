@@ -2080,6 +2080,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.482
       objectReference: {fileID: 0}
+    - target: {fileID: 7327175839178762276, guid: 9b838bea776c550488479953c80e76d3, type: 3}
+      propertyPath: nextScene
+      value: SCN_Level_4
+      objectReference: {fileID: 0}
     - target: {fileID: 7327175839178762277, guid: 9b838bea776c550488479953c80e76d3, type: 3}
       propertyPath: m_Name
       value: LevelGoal
