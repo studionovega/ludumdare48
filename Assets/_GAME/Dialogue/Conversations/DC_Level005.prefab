@@ -54,7 +54,7 @@ MonoBehaviour:
     _emotion:
     - Normal
     _sprite:
-    - {fileID: 21300000, guid: 0cd9ea7300947494fa50280e62faaf4d, type: 3}
+    - {fileID: 21300000, guid: 09e34f31bd927e74b96f601e2b5a2007, type: 3}
   ChatSE:
   - {fileID: 8300000, guid: 3aee473a6c92372409298cf82a2ea58b, type: 3}
   CallSE: []
@@ -465,7 +465,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -561,7 +561,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
