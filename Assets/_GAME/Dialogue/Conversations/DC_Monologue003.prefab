@@ -61,7 +61,7 @@ MonoBehaviour:
   Printer_Text: {fileID: 4358072618593734028}
   SEAudio: {fileID: 4290622793155416458}
   CallAudio: {fileID: 4290622793155416457}
-  interactAudio: {fileID: 8300000, guid: 993967dc5bdbc6343b37b13b01405edd, type: 3}
+  interactAudio: {fileID: 8300000, guid: 828c2b03a63c9aa479e4c23af9efded7, type: 3}
   Delay: 0.015
   state: 0
   Result: 
