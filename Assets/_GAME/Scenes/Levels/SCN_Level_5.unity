@@ -1689,6 +1689,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 650249504, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
+      propertyPath: m_text
+      value: LEVEL 4 - "TIGHTROPE"
+      objectReference: {fileID: 0}
     - target: {fileID: 1948989906, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_Color.b
       value: 0.20658687
