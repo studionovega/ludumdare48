@@ -6371,7 +6371,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dad3e437c997cfa47ae6f18bab9dc711, type: 2}
     - target: {fileID: 7327175839178762276, guid: 9b838bea776c550488479953c80e76d3, type: 3}
       propertyPath: nextScene
-      value: SCN_Level_3
+      value: SCN_Level_5
       objectReference: {fileID: 0}
     - target: {fileID: 7327175839178762277, guid: 9b838bea776c550488479953c80e76d3, type: 3}
       propertyPath: m_Name
