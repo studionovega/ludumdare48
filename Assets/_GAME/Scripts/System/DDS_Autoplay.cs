@@ -105,6 +105,12 @@ namespace com.novega.ludumdare48
                 dialogManager.Click_Window();
                 skipTime = 0f;
             }
+
+            if (gameRef.player.gameOver)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Destroy(gameObject);
+            }
         }
 
         void FinishDialogue()

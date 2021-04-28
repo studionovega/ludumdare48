@@ -1478,9 +1478,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 629727806, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 650249504, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_text
-      value: LEVEL 5 - "CHECKERS"
+      value: LEVEL 4 - "CHECKERBOARD DEATH HOUSE"
       objectReference: {fileID: 0}
     - target: {fileID: 1298524404783677941, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_RootOrder
@@ -7201,7 +7205,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7327175839178762276, guid: 9b838bea776c550488479953c80e76d3, type: 3}
       propertyPath: nextScene
-      value: SCN_ML_Level-End
+      value: SCN_Level_5
       objectReference: {fileID: 0}
     - target: {fileID: 7327175839178762277, guid: 9b838bea776c550488479953c80e76d3, type: 3}
       propertyPath: m_Name
@@ -7279,7 +7283,7 @@ PrefabInstance:
     - target: {fileID: 252837100447366613, guid: a4aec2d64c5588b44ba64798293250a3, type: 3}
       propertyPath: objects.Array.data[0]
       value: 
-      objectReference: {fileID: 1765389328892954129, guid: 6ef5e9a7f3fd4d646a0ec099338897f2, type: 3}
+      objectReference: {fileID: 2700728499969132643, guid: 50c195738309dd74f8e374908b1b9e0e, type: 3}
     - target: {fileID: 252837100447366614, guid: a4aec2d64c5588b44ba64798293250a3, type: 3}
       propertyPath: m_RootOrder
       value: 8

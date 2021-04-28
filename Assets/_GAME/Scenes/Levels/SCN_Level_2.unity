@@ -1264,9 +1264,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 629727806, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 650249504, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: m_text
-      value: LEVEL 2 - "PARKOUR"
+      value: LEVEL 2 - "WINDOWS 9 TO 5"
       objectReference: {fileID: 0}
     - target: {fileID: 1298524404783677940, guid: 691b74684b7c5a1419c269cbc86a31b6, type: 3}
       propertyPath: sanityWaitTimes.x

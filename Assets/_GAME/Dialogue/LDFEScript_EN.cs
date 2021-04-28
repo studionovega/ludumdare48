@@ -102,11 +102,11 @@ namespace com.novega.ludumdare48
             // [00021]
             characterScript.Add("/s/HANS:/e/ \nRICO? RICO MY GOOD SIR, CAN YOU \nHEAR ME?");
             // [00022]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Confused/wheuh ?????");
+            characterScript.Add("/emote:Confused//s/RICO:/e/ \nwheuh ?????");
             // [00023]
-            characterScript.Add("/s/RICO:/e/ \n...");
+            characterScript.Add("/emote:Confused//s/RICO:/e/ \n...");
             // [00024]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Normal/oh, yeah. wuzzup.");
+            characterScript.Add("/s/RICO:/e/ \noh, yeah. wuzzup.");
             // [00025]
             characterScript.Add("/s/HANS:/e/ \nGood. Welcome to Science Lab \nIndustrial Incorporated Industries, \nor in other words, SLIII.");
             // [00026]
@@ -118,23 +118,23 @@ namespace com.novega.ludumdare48
             // [00029]
             characterScript.Add("/s/RICO:/e/ \na PHD is just a meaningless piece of \npaper brah.");
             // [00030]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Confused/what the fuck is /i/''SLIII''/ei/ anyways? \nyou still haven't told me yet.");
+            characterScript.Add("/emote:Confused//s/RICO:/e/ \nwhat the fuck is /i/''SLIII''/ei/ anyways? \nyou still haven't told me yet.");
             // [00031]
-            characterScript.Add("/s/HANS:/e/ \nDon't you, ''like'', /i/work here/ei/, /speed:down/''dude''? /wait:0.25//speed:up/\nYou should know this stuff by now."); // imitating Rico
+            characterScript.Add("/s/HANS:/e/ \nDon't you, ''like'', /i/work here/ei/, /speed:0.003/''dude''? /wait:0.25//speed:up/\nYou should know this stuff by now."); // imitating Rico
             // [00032]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Angry/okay, brah i know i'm wasted as fuck right now but i swear i'm not a dumbass.");
+            characterScript.Add("/emote:Angry//s/RICO:/e/ \nokay, brah i know i'm wasted as fuck right now but i swear i'm not a dumbass.");
             // [00033]
-            characterScript.Add("/s/RICO:/e/ \ndidn't we like, meet in a dark alleyway when i shook your hand for the first time after which you stabbed me with a syringe and i proceeded to pass out");
+            characterScript.Add("/emote:Angry//s/RICO:/e/ \ndidn't we like, meet in a dark alleyway when i shook your hand for the first time after which you stabbed me with a syringe and i proceeded to pass out");
             // [00034]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Angry/HEY, THAT WAS A TOTALLY VALID AND JUSTIFIED METHOD OF ACTION!");
+            characterScript.Add("/emote:Angry//s/DELLA:/e/ \nHEY, THAT WAS A TOTALLY VALID AND JUSTIFIED METHOD OF ACTION!");
             // [00035]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Normal/yea ok, you right.");
+            characterScript.Add("/s/RICO:/e/ \nyea ok, you right.");
             // [00036]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Confused/...wait who's the chick");
+            characterScript.Add("/emote:Confused//s/RICO:/e/ \n...wait who's the chick");
             // [00037]
             characterScript.Add("/s/DELLA:/e/ \nDella Vasquez, Reporting For Call Of Duty! /click//emote:Smirk/I'm Here To Assist You And Mr. Reuter, In An Assistant-Like Fashion.");
             // [00038]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Normal/oooookay. well, i have a few questions.");
+            characterScript.Add("/s/RICO:/e/ \noooookay. well, i have a few questions.");
             // [00039]
             characterScript.Add("/s/RICO:/e/ \nfirst of all, /emote:Confused/why are you making me do parkour?");
             // [00040]
@@ -142,11 +142,11 @@ namespace com.novega.ludumdare48
             // [00041]
             characterScript.Add("/s/HANS:/e/ \nWell, looks like we're out of time for questions today. Good luck.");
             // [00042]
-            characterScript.Add("/s/RICO:/e/ \nwhat? /emote:Angry/no- /skip/!");
+            characterScript.Add("/emote:Angry//s/RICO:/e/ \nwhat? no- /skip/!");
             // [00043]
             characterScript.Add("(Hans hangs up the phone.)");
             // [00044]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Angry/son of a bitch.");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \nson of a bitch.");
 
             // SCENE: Level 1 ---------------------------------------------------------------------------------------------------------------------------
             // [00045]
@@ -158,27 +158,27 @@ namespace com.novega.ludumdare48
             // [00048]
             characterScript.Add("(It seems like they're having trouble \nreaching you. They're screaming \ninto their microphone.)");
             // [00049]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Confused/where even am i?");
+            characterScript.Add("/emote:Confused//s/RICO:/e/ \nwhere even am i?");
 
             // SCENE: Level 3 ---------------------------------------------------------------------------------------------------------------------------
             // [00050]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Angry/alright, I finished that stupid \npuzzle. you gonna tell me what you \nkeep stabbing me with bro?");
+            characterScript.Add("/emote:Angry//s/RICO:/e/ \nalright, I finished that stupid \npuzzle. you gonna tell me what you \nkeep stabbing me with bro?");
             // [00051]
             characterScript.Add("/s/HANS:/e/ \n...");
             // [00052]
             characterScript.Add("/s/HANS:/e/ \nI don't know what you're talking \nabout.");
             // [00053]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk/lol, That's Code For ''You \nFuckin' Wish''.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nlol, That's Code For ''You \nFuckin' Wish''.");
             // [00054]
             characterScript.Add("/s/RICO:/e/ \nyou guys are unbelievable.");
             // [00055]
             characterScript.Add("/s/HANS:/e/ \nyou're the one who agreed to me \nstabbing you with a syringe.");
             // [00056]
-            characterScript.Add("/s/RICO:/e/ \num, /i/sorry/ei/, can you /emote:Angry//i/pinpoint/ei/ the \nmoment in time when i /i/agreed/ei/ to \nbeing stabbed with a fucking syringe?");
+            characterScript.Add("/emote:Angry//s/RICO:/e/ \num, /i/sorry/ei/, can you /emote:Angry//i/pinpoint/ei/ the \nmoment in time when i /i/agreed/ei/ to \nbeing stabbed with a fucking syringe?");
             // [00057]
             characterScript.Add("/s/HANS:/e/ \nYes, I can actually! It was the moment when I signed the contract with your finger after you passed out./wait:0.25//skip/.");
             // [00058]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Pissed//i/you wot m8/ei/?");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \n/i/you wot m8/ei/?");
             // [00059]
             characterScript.Add("/s/HANS:/e/ \nHey, don't look a gift horse in the mouth \nkid. You can't afford a gram of anything \nelse and I stabbed you with that syringe \nfree of charge.");
             // [00060]
@@ -186,59 +186,59 @@ namespace com.novega.ludumdare48
             // [00061]
             characterScript.Add("(Rico lets out a sigh of pure, \nunadulterated self-disappointment.)");
             // [00062]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Pissed/fine.");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \nfine.");
             // [00063]
             characterScript.Add("(Rico makes a note to himself to \ndrive his hotboxing car into a lake \nafter he escapes.)");
 
             // SCENE: Level 4 ---------------------------------------------------------------------------------------------------------------------------
             // [00064]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk/Alright, Mr. Rico. Hans Is Away From The Walkie-Talkies At The Moment, but Let Me Just Say...");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nAlright, Mr. Rico. Hans Is Away From The Walkie-Talkies At The Moment, but Let Me Just Say...");
             // [00065]
-            characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far. We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
+            characterScript.Add("/s/DELLA:/e/ \nYou're Doing Pretty Well So Far! /click//emote:Smirk2/We Just Need To Run A Few More Tests, and We'll Be All Set To Let You Go!");
             // [00066]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Pissed/oh thank god. /wait:0.25/I mean-/skip/-");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \noh thank god. /wait:0.25/I mean-/skip/-");
             // [00067]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Normal/Sounds Great!");
+            characterScript.Add("/s/RICO:/e/ \nSounds Great!");
             // [00068]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Neutral/Nah, I Get It. Hans Can Be Kind Of An Ass Sometimes.");
+            characterScript.Add("/emote:Neutral//s/DELLA:/e/ \nNah, I Get It. Hans Can Be Kind Of An Ass Sometimes.");
             // [00069] haha nice
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Neutral/Here, I Know He Was Being Stubborn Earlier, and I Feel Like You Should At Least Know What The Hell He Stabbed You With.");
+            characterScript.Add("/emote:Neutral//s/DELLA:/e/ \nHere, I Know He Was Being Stubborn Earlier, and I Feel Like You Should At Least Know What The Hell He Stabbed You With.");
             // [00070]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk2/Pretend I Said Nothing, But The Drug That You Were Injected With Is Called- /wait:0.5//emote:Neutral/in his words, not mine-/wait:0.5/ ''Methamphetamine 2, Electric Boogaloo''.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nPretend I Said Nothing, But The Drug That You Were Injected With Is Called- /wait:0.5//emote:Neutral/in his words, not mine-/wait:0.5/ ''Methamphetamine 2, Electric Boogaloo''.");
             // [00071]
             characterScript.Add("/s/RICO:/e/ \nsounds like our friend is pretty great with names.");
             // [00072]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk2/The Best.");
+            characterScript.Add("/emote:Smirk2//s/DELLA:/e/ \nThe Best.");
             // [00073]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk/Anyways, Research Suggests That There Could Be A Possible Correlation Between Taking It.../wait:0.5//emote:Neutral/and Possessing Abnormally Large Genitalia.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nAnyways, Research Suggests That There Could Be A Possible Correlation Between Taking It.../wait:0.5//emote:Neutral/and Possessing Abnormally Large Genitalia.");
             // [00074]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Neutral/He Just Didn't Want To Risk It Backfiring On Him, So He Hired You To Test It For Him.");
+            characterScript.Add("/emote:Neutral//s/DELLA:/e/ \nHe Just Didn't Want To Risk It Backfiring On Him, So He Hired You To Test It For Him.");
             // [00075]
             characterScript.Add("/s/RICO:/e/ \n.../click/huh.");
             // [00076]
             characterScript.Add("/s/RICO:/e/ \nwell, i suppose there's a bright side to this then.");
             // [00077]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk2//i/Yeah/ei/, You Truly /i/Took One For The Team/ei/ With This One. /emote:Smirk/Congrats On Somehow Getting Here Alive.");
+            characterScript.Add("/emote:Smirk2//s/DELLA:/e/ \n/i/Yeah/ei/, You Truly /i/Took One For The Team/ei/ With This One. /emote:Smirk/Congrats On Somehow Getting Here Alive.");
             // [00078]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Smirk/thank you, i'm glad to be making a contribution to society.");
+            characterScript.Add("/emote:Smirk//s/RICO:/e/ \nthank you, i'm glad to be making a contribution to society.");
             // [00079]
             characterScript.Add("/s/RICO:/e/ \nbut wait.../wait:0.25//emote:Confused/if you're working for Hans, then why are you helping me out?");
             // [00080]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Neutral/Well, Don't Get Me Wrong- Hans Is A Surprisingly Good Boss.");
+            characterScript.Add("/emote:Neutral//s/DELLA:/e/ \nWell, Don't Get Me Wrong- Hans Is A Surprisingly Good Boss.");
             // [00081]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Smirk/emphasis on ''surprisingly''.");
+            characterScript.Add("/emote:Smirk//s/RICO:/e/ \nemphasis on ''surprisingly''.");
             // [00082]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk/But He Can Also Be Stubborn Sometimes. When That Happens, It's /emote:Smirk2/My Turn To Step In.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nBut He Can Also Be Stubborn Sometimes. When That Happens, It's /emote:Smirk2/My Turn To Step In.");
             // [00083]
-            characterScript.Add("/s/DELLA:/e/ \nConsider It A Way To Tip The Scale Back.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nConsider It A Way To Tip The Scale Back.");
             // [00084]
             characterScript.Add("/s/RICO:/e/ \nwell.../wait:0.5/ thank you. /click/ i appreciate it.");
             // [00085]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk2/No Problem. /click/Finish The Puzzle And Let's Get Going.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nNo Problem. /click/Finish The Puzzle And Let's Get Going.");
             // [00086]
-            characterScript.Add("/s/RICO:/e/ \n/emote:Smirk/aye aye, capt-ette.");
+            characterScript.Add("/emote:Smirk//s/RICO:/e/ \naye aye, capt-ette.");
             // [00087]
-            characterScript.Add("/s/DELLA:/e/ \n/emote:Smirk/please don't ever say that again.");
+            characterScript.Add("/emote:Smirk2//s/DELLA:/e/ \nplease don't ever say that again.");
 
             // SCENE: Level 5 ---------------------------------------------------------------------------------------------------------------------------
             // [00088]
@@ -256,9 +256,9 @@ namespace com.novega.ludumdare48
             // [00094]
             characterScript.Add("/s/HANS:/e/ \nYou're welcome, my good sir! I can't ever say no to a patient.");
             // [00095]
-            characterScript.Add("/s/RICO:/e/ \n*sigh*");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \n*sigh*");
             // [00096]
-            characterScript.Add("/s/RICO:/e/ \njust pass the walkie-talkie to della.");
+            characterScript.Add("/emote:Pissed//s/RICO:/e/ \njust pass the walkie-talkie to della.");
             // [00097]
             characterScript.Add("/s/HANS:/e/ \nSure thing, Rico.");
             // [00004] ...
@@ -267,28 +267,28 @@ namespace com.novega.ludumdare48
             // [00099]
             characterScript.Add("/s/RICO:/e/ \noh no, sorry; nothing. bird dick up there was just giving me a headache.");
             // [00100]
-            characterScript.Add("/s/DELLA:/e/ \nAs Per Usual.");
+            characterScript.Add("/emote:Smirk2//s/DELLA:/e/ \nAs Per Usual.");
             // [00101]
             characterScript.Add("/s/DELLA:/e/ \nWell, At Least This Is The End Of It. After This, You Won't Ever Have To See That Duck's Face Again.");
             // [00102]
-            characterScript.Add("/s/RICO:/e/ \nthank GOOOOOOOOOOOOD. /wait:0.25/.../wait:0.25/i guess.");
+            characterScript.Add("/s/RICO:/e/ \nthank GOOOOOOOOOOOOD. /wait:0.25/.../wait:0.25//emote:Confused/i guess.");
             // [00004] ...
             // [00103]
             characterScript.Add("/s/RICO:/e/ \ny'know, /wait:0.25/i know i still hate Hans' guts and all, and that's not going to change any time soon-");
             // [00104]
-            characterScript.Add("/s/RICO:/e/ \nbut, /wait:0.25/you seem pretty cool. /click/you've got a Chattr?");
+            characterScript.Add("/s/RICO:/e/ \nbut, /wait:0.25//emote:Smirk/you seem pretty cool. /click/you've got a Chattr?");
             // [00105]
             characterScript.Add("(Della blushes slightly- in an awkward, yamete-like fashion.)");
             // [00106]
             characterScript.Add("(She realizes it almost instantly, and quickly shifts her eyes towards Rico from the glass.)");
             // [00107]
-            characterScript.Add("/s/DELLA:/e/ \n...Uhh...Priorities, Bro?");
+            characterScript.Add("/emote:Neutral//s/DELLA:/e/ \n...Uhh.../wait:0.25//emote:Smirk2/Priorities, Bro?");
             // [00108]
             characterScript.Add("(She gives Rico a sarcastic smirk.)");
             // [00109]
-            characterScript.Add("/s/DELLA:/e/ \nTry Not To Get Your Ass Burnt To A Crisp In The Lava First, Then We'll Talk.");
+            characterScript.Add("/emote:Smirk//s/DELLA:/e/ \nTry Not To Get Your Ass Burnt To A Crisp In The Lava First, Then We'll Talk.");
             // [00110]
-            characterScript.Add("/s/RICO:/e/ \n/i/pft/ei/, game on.");
+            characterScript.Add("/emote:Smirk//s/RICO:/e/ \n/i/pft/ei/, game on.");
 
             // SCENE: End Monologue ---------------------------------------------------------------------------------------------------------------------------
             // [00111]

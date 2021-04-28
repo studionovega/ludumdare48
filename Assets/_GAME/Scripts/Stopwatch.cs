@@ -14,12 +14,15 @@ namespace com.novega.ludumdare48
         public GameObject timerTextObject;
         public TextMeshProUGUI countdownText;
         public GameObject countdownTextObject;
+        public Color finishedColor;
         public GameReference gameRef;
+        bool finished = false;
 
         // Start is called before the first frame update
         void Start()
         {
             GameReference.Assign(ref gameRef);
+            gameRef.stopwatch = this;
 
             StartCountdown();
         }
@@ -29,7 +32,7 @@ namespace com.novega.ludumdare48
         {
             if (runTimer)
             {
-                levelTime += Time.deltaTime;
+                levelTime += !finished ? Time.deltaTime : 0.0f;
                 timerText.text = levelTime.ToString("0.000");
             }
             else
@@ -43,6 +46,12 @@ namespace com.novega.ludumdare48
         {
             Debug.Log("Help me");
             StartCoroutine(CountdownTimer());
+        }
+
+        public void Stop()
+        {
+            finished = true;
+            timerText.color = finishedColor;
         }
 
         private IEnumerator CountdownTimer()

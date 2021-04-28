@@ -61,7 +61,7 @@ namespace com.novega.ludumdare48
         Vector3 velocity;
         float moveMult = 0.5f;
         bool rolling = false;
-        bool gameOver = false;
+        [HideInInspector] public bool gameOver = false;
         public bool springTrigger = false;
         bool coyote = false;
         bool ces = false;
@@ -73,6 +73,7 @@ namespace com.novega.ludumdare48
             _animator = GetComponent<Animator>();
             _controller.enabled = true;
             GameReference.Assign(ref gameRef);
+            gameRef.player = this;
             cam = Camera.main;
 
             spawnPosition = transform.position;

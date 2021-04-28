@@ -778,10 +778,14 @@ MonoBehaviour:
     - Normal
     - Angry
     - Smirk
+    - Smirk2
+    - Neutral
     _sprite:
     - {fileID: 21300000, guid: 06338e8c633485240850a1f1c0b84b6b, type: 3}
     - {fileID: 21300000, guid: 90dcb1e7a78f9a44a8ef72bb79cedc22, type: 3}
     - {fileID: 21300000, guid: ec0f657c26d216e40ac25c8b71a87fc0, type: 3}
+    - {fileID: 21300000, guid: 047bb9caa4c837249954e4969eab0e7e, type: 3}
+    - {fileID: 21300000, guid: 5200b07935f69334fa31e597bb106119, type: 3}
   ChatSE:
   - {fileID: 8300000, guid: 3aee473a6c92372409298cf82a2ea58b, type: 3}
   CallSE: []
@@ -878,10 +882,14 @@ MonoBehaviour:
     - Normal
     - Angry
     - Confused
+    - Smirk
+    - Pissed
     _sprite:
     - {fileID: 21300000, guid: ffc34e9b3f4d48e4fae688761b0f454c, type: 3}
     - {fileID: 21300000, guid: f398c3e174339694893df046df85555a, type: 3}
     - {fileID: 21300000, guid: 91f097fb5fa786e4c9a2552a33c88868, type: 3}
+    - {fileID: 21300000, guid: 99e04203688744c4281067573414f95c, type: 3}
+    - {fileID: 21300000, guid: 3b0fb56a9f6f10140ac5c7087857babc, type: 3}
   ChatSE:
   - {fileID: 8300000, guid: 3aee473a6c92372409298cf82a2ea58b, type: 3}
   CallSE: []

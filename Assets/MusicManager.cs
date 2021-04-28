@@ -24,25 +24,10 @@ namespace com.novega.ludumdare48
         private float gameMusicPlayhead;
         void Awake()
         {
-            //Make this a singleton
-            GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
-
-            if (spawned && !original)
-            {
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                spawned = true;
-                original = true;
-                DontDestroyOnLoad(this.gameObject);
-                //Accessible from any script easily because of a static reference.
-                self = this;
-
-                _source = GetComponent<AudioSource>();
-                _source.loop = true;
-                Debug.Log("gameMusicPlayhead init: " + gameMusicPlayhead);
-            }
+            self = this;
+            _source = GetComponent<AudioSource>();
+            _source.loop = true;
+            Debug.Log("gameMusicPlayhead init: " + gameMusicPlayhead);
         }
 
 

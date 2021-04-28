@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 15716425}
   - component: {fileID: 15716424}
   - component: {fileID: 15716427}
+  - component: {fileID: 15716428}
   m_Layer: 5
   m_Name: Level Select
   m_TagString: Untagged
@@ -219,6 +220,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 15716428}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15716425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +287,23 @@ MonoBehaviour:
   instantiateOnExit: {fileID: 0}
   destroyObject: {fileID: 0}
   cancelButton: 
+--- !u!114 &15716428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15716422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 828c2b03a63c9aa479e4c23af9efded7, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &53966883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1058,7 @@ MonoBehaviour:
   activateAfterWait: 1
   waitSeconds: 1.5
   seconds: 1
-  backupLerp: 0.0075
+  backupLerp: 0.015
   toFloat: 490
   toColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &224003627
@@ -1305,6 +1335,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &354474421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354474423}
+  - component: {fileID: 354474422}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &354474422
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354474421}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5263525074654362592, guid: b4083731abeba414ea5a08f3b7f6adbb, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.287
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &354474423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354474421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 253, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359242921
 GameObject:
@@ -2914,6 +3071,7 @@ GameObject:
   - component: {fileID: 584160764}
   - component: {fileID: 584160763}
   - component: {fileID: 584160762}
+  - component: {fileID: 584160766}
   m_Layer: 5
   m_Name: LEVEL 3
   m_TagString: Untagged
@@ -2934,7 +3092,7 @@ RectTransform:
   m_Children:
   - {fileID: 1044202605}
   m_Father: {fileID: 1856355447}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2956,7 +3114,7 @@ MonoBehaviour:
   sceneToLoad: SCN_ML_Level-3
   loadThisScene: 0
   loadAutomatically: 0
-  waitSeconds: 0
+  waitSeconds: 3
 --- !u!114 &584160763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,6 +3171,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 584160766}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584160764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3051,6 +3221,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584160760}
   m_CullTransparentMesh: 1
+--- !u!114 &584160766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584160760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &599835530
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4230,8 @@ GameObject:
   - component: {fileID: 716086968}
   - component: {fileID: 716086967}
   - component: {fileID: 716086970}
+  - component: {fileID: 716086971}
+  - component: {fileID: 716086972}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -4192,6 +4381,52 @@ MonoBehaviour:
   loadThisScene: 0
   loadAutomatically: 0
   waitSeconds: 3
+--- !u!114 &716086971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716086965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
+--- !u!114 &716086972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716086965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716086971}
+          m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+          m_MethodName: PlayRandom
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &716270447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,6 +4562,7 @@ GameObject:
   - component: {fileID: 743289737}
   - component: {fileID: 743289736}
   - component: {fileID: 743289735}
+  - component: {fileID: 743289739}
   m_Layer: 5
   m_Name: LEVEL 4
   m_TagString: Untagged
@@ -4347,7 +4583,7 @@ RectTransform:
   m_Children:
   - {fileID: 224003628}
   m_Father: {fileID: 1856355447}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4366,10 +4602,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74c4e6b055ef2a4e8f52c7883bab45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SCN_Level_5
+  sceneToLoad: SCN_Level_3
   loadThisScene: 0
   loadAutomatically: 0
-  waitSeconds: 0
+  waitSeconds: 3
 --- !u!114 &743289736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4426,6 +4662,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 743289739}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &743289737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4464,6 +4712,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743289733}
   m_CullTransparentMesh: 1
+--- !u!114 &743289739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743289733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &776549932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4477,6 +4742,7 @@ GameObject:
   - component: {fileID: 776549936}
   - component: {fileID: 776549935}
   - component: {fileID: 776549934}
+  - component: {fileID: 776549939}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -4577,6 +4843,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 776549939}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &776549936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4615,6 +4893,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776549932}
   m_CullTransparentMesh: 1
+--- !u!114 &776549939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776549932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &797359682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7529,6 +7824,7 @@ GameObject:
   - component: {fileID: 1500754794}
   - component: {fileID: 1500754793}
   - component: {fileID: 1500754792}
+  - component: {fileID: 1500754796}
   m_Layer: 5
   m_Name: LEVEL 1
   m_TagString: Untagged
@@ -7571,7 +7867,7 @@ MonoBehaviour:
   sceneToLoad: SCN_ML_Level-1
   loadThisScene: 0
   loadAutomatically: 0
-  waitSeconds: 0
+  waitSeconds: 3
 --- !u!114 &1500754793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7628,6 +7924,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1500754796}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1500754794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7666,6 +7974,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500754790}
   m_CullTransparentMesh: 1
+--- !u!114 &1500754796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500754790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &1500798285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8022,6 +8347,7 @@ GameObject:
   - component: {fileID: 1573177905}
   - component: {fileID: 1573177904}
   - component: {fileID: 1573177903}
+  - component: {fileID: 1573177907}
   m_Layer: 5
   m_Name: LEVEL 5
   m_TagString: Untagged
@@ -8042,7 +8368,7 @@ RectTransform:
   m_Children:
   - {fileID: 510951665}
   m_Father: {fileID: 1856355447}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8061,10 +8387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74c4e6b055ef2a4e8f52c7883bab45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SCN_Level_3
+  sceneToLoad: SCN_Level_5
   loadThisScene: 0
   loadAutomatically: 0
-  waitSeconds: 0
+  waitSeconds: 3
 --- !u!114 &1573177904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8121,6 +8447,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1573177907}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573177905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8159,6 +8497,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573177901}
   m_CullTransparentMesh: 1
+--- !u!114 &1573177907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573177901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &1599344658
 GameObject:
   m_ObjectHideFlags: 0
@@ -8423,6 +8778,7 @@ GameObject:
   - component: {fileID: 1700777157}
   - component: {fileID: 1700777156}
   - component: {fileID: 1700777159}
+  - component: {fileID: 1700777160}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -8506,6 +8862,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1700777160}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700777157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8561,6 +8929,23 @@ MonoBehaviour:
   instantiateOnExit: {fileID: 0}
   destroyObject: {fileID: 0}
   cancelButton: 
+--- !u!114 &1700777160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700777154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 828c2b03a63c9aa479e4c23af9efded7, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &1727437376
 GameObject:
   m_ObjectHideFlags: 0
@@ -9692,6 +10077,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839225652}
   m_CullTransparentMesh: 1
+--- !u!1 &1846833553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846833555}
+  - component: {fileID: 1846833554}
+  m_Layer: 0
+  m_Name: Global Volume SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!167 &1846833554
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846833553}
+  m_Enabled: 1
+  m_MinDistance: 100
+  m_MaxDistance: 100
+  m_ReverbPreset: 10
+  m_Room: -1000
+  m_RoomHF: -698
+  m_DecayTime: 7.24
+  m_DecayHFRatio: 0.33
+  m_Reflections: -1166
+  m_ReflectionsDelay: 0.02
+  m_Reverb: 16
+  m_ReverbDelay: 0.03
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!4 &1846833555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846833553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1856355446
 GameObject:
   m_ObjectHideFlags: 0
@@ -9723,10 +10163,10 @@ RectTransform:
   - {fileID: 1727437377}
   - {fileID: 936496360}
   - {fileID: 1500754791}
-  - {fileID: 584160761}
-  - {fileID: 1573177902}
   - {fileID: 1912809181}
+  - {fileID: 584160761}
   - {fileID: 743289734}
+  - {fileID: 1573177902}
   m_Father: {fileID: 581636015}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10203,6 +10643,7 @@ GameObject:
   - component: {fileID: 1912809184}
   - component: {fileID: 1912809183}
   - component: {fileID: 1912809182}
+  - component: {fileID: 1912809186}
   m_Layer: 5
   m_Name: LEVEL 2
   m_TagString: Untagged
@@ -10223,7 +10664,7 @@ RectTransform:
   m_Children:
   - {fileID: 1535529412}
   m_Father: {fileID: 1856355447}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10245,7 +10686,7 @@ MonoBehaviour:
   sceneToLoad: SCN_Level_2
   loadThisScene: 0
   loadAutomatically: 0
-  waitSeconds: 0
+  waitSeconds: 3
 --- !u!114 &1912809183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10302,6 +10743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1912809186}
+        m_TargetAssemblyTypeName: com.novega.ludumdare48.PlayRandomSound, Assembly-CSharp
+        m_MethodName: PlayRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1912809184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10340,6 +10793,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912809180}
   m_CullTransparentMesh: 1
+--- !u!114 &1912809186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912809180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d18ec77ea1f914da6608a55b33db4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 354474422}
+  sounds:
+  - {fileID: 8300000, guid: 187ed6d151fa9774d8b08cbbc97668a2, type: 3}
+  pitchBend: 0
+  pitchMinMax: {x: 0, y: 0}
 --- !u!1 &1977491077
 GameObject:
   m_ObjectHideFlags: 0
